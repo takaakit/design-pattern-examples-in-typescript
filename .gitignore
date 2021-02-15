@@ -1,5 +1,4 @@
 *.asta.lock
 *.js
 *.map
-.vscode/
 node_modules/

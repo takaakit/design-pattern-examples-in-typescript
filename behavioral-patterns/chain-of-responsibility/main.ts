@@ -1,4 +1,10 @@
-// Someone handles a trouble.
+/*
+A trouble is turned around among supporters, and the trouble will be handled by the supporter who can handle it. There are four types of supporters below:
+* "LazySupporter" doesn't handle any trouble
+* "MoodySupporter" handles odd ID troubles
+* "SpecialSupporter" handles a trouble of the target ID.
+* "LimitedSupporter" handles troubles below the limit ID.
+ */
 'use strict';
 
 import { Supporter } from './supporter';
@@ -10,15 +16,13 @@ import { Trouble } from './trouble';
 
 const emily: Supporter = new LazySupporter('Emily');
 const william: Supporter = new MoodySupporter('William');
-const amelia: Supporter = new SpecialSupporter('Amelia', 153);
-const michael: Supporter = new SpecialSupporter('Michael', 340);
-const joseph: Supporter = new LimitedSupporter('Joseph', 250);
-const lily: Supporter = new LimitedSupporter('Lily', 350);
+const amelia: Supporter = new SpecialSupporter('Amelia', 6);
+const joseph: Supporter = new LimitedSupporter('Joseph', 5);
 
 // Make a chain.
-emily.setNext(william).setNext(amelia).setNext(michael).setNext(joseph).setNext(lily);
+emily.setNext(william).setNext(amelia).setNext(joseph);
 
 // Various troubles occurred.
-for (let i: number = 0; i < 500; i += 17) {
+for (let i: number = 0; i < 10; i++) {
 	emily.support(new Trouble(i));
 }

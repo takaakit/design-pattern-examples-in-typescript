@@ -20,7 +20,7 @@ export class MoodySupporter extends Supporter {
     // Troubles with an odd ID are handled.
     handle(trouble: Trouble): boolean {
         // ˅
-        return trouble.id % 2 == 1;
+        return trouble.id % 2 === 1;
         // ˄
     }
 

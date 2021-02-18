@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe"
+	}
 }

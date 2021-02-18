@@ -65,10 +65,11 @@ Installation
   **Use ver.2.5.0 or higher.**
 
 **Development Environment for TypeScript**
-* Prepare a development environment for TypeScript (e.g. [Visual Studio Code](https://code.visualstudio.com/download)).
-* Install the [Node.js](https://nodejs.org/en/). Use node ver.12.3.1 or higher.
-* After installing the Node.js, install the TypeScript and the node type definitions with the following commands using the Node Package Manager (NPM).  
+* Install [Visual Studio Code](https://code.visualstudio.com/download).
+* Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
+* After installing Node.js, install TypeScript and Node type definitions with the following commands using Node Package Manager (NPM).  
 `npm install -g typescript`  
+`cd <this directory>`  
 `npm install @types/node`
 
 Usage

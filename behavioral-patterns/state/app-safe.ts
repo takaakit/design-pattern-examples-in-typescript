@@ -113,7 +113,7 @@ export class AppSafe implements Context {
 
     private clickExit(): void {
         // ˅
-        window.open('','_self').close();    // Exit button pressed
+        document.body.innerHTML = "<h1>Dialog terminated.</h1>" // Exit button pressed
         // ˄
     }
 

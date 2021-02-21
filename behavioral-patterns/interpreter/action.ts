@@ -16,11 +16,14 @@ export class Action implements Node {
 
     parse(context: Context): void {
         // ˅
-		this.name = context.getToken();
-		context.slideToken(this.name);
-		if (this.name !== 'forward' && this.name !== 'right' && this.name !== 'left') {
-			throw new Error(this.name + ' is unknown');
+		const currentToken: string = context.getToken();
+		if (currentToken !== 'forward' && currentToken !== 'right' && currentToken !== 'left') {
+			throw new Error(currentToken + ' is unknown');
 		}
+
+        this.name = currentToken;
+
+        context.slideToken(currentToken);
         // ˄
     }
 

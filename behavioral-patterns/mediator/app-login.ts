@@ -13,43 +13,44 @@ export class AppLogin implements Mediator {
     
     // ˄
 
-    private colleagueRadioLogin: ColleagueRadioButton;
+    private radioLogin: ColleagueRadioButton;
 
-    private colleagueRadioGuest: ColleagueRadioButton;
+    private radioGuest: ColleagueRadioButton;
 
-    private colleagueTextUsername: ColleagueTextField;
+    private textUsername: ColleagueTextField;
 
-    private colleagueTextPassword: ColleagueTextField;
+    private textPassword: ColleagueTextField;
 
-    private colleagueButtonOk: ColleagueButton;
+    private buttonOk: ColleagueButton;
 
-    private colleagueButtonCancel: ColleagueButton;
+    private buttonCancel: ColleagueButton;
 
     constructor() {
         // ˅
+        // Create TextField, Button and RadioButton
         this.createColleagues();
+
+        // Set mediators
+        this.radioGuest.mediator = this;
+        this.radioLogin.mediator = this;
+        this.textUsername.mediator = this;
+        this.textPassword.mediator = this;
+        this.buttonOk.mediator = this;
+        this.buttonCancel.mediator = this;
+
+        // Generate a click event of the guest radio button.
+        (<HTMLButtonElement>document.getElementById('radioGuest')).click();
         // ˄
     }
 
     createColleagues(): void {
         // ˅
-        this.colleagueRadioGuest = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioGuest'));
-        this.colleagueRadioLogin = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioLogin'));
-        this.colleagueTextUsername = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textUsername'));
-        this.colleagueTextPassword = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textPassword'));
-        this.colleagueButtonOk = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonOk'));
-        this.colleagueButtonCancel = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonCancel'));
-
-        // Set mediators
-        this.colleagueRadioGuest.mediator = this;
-        this.colleagueRadioLogin.mediator = this;
-        this.colleagueTextUsername.mediator = this;
-        this.colleagueTextPassword.mediator = this;
-        this.colleagueButtonOk.mediator = this;
-        this.colleagueButtonCancel.mediator = this;
-
-        // Generate a click event of the guest radio button.
-        (<HTMLButtonElement>document.getElementById('radioGuest')).click();
+        this.radioGuest = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioGuest'));
+        this.radioLogin = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioLogin'));
+        this.textUsername = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textUsername'));
+        this.textPassword = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textPassword'));
+        this.buttonOk = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonOk'));
+        this.buttonCancel = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonCancel'));
         // ˄
     }
 
@@ -62,21 +63,21 @@ export class AppLogin implements Mediator {
         }
         else {
             if (event.currentTarget === document.getElementById('radioGuest')) { // Guest mode
-                this.colleagueTextUsername.setActivation(false);
-                this.colleagueTextPassword.setActivation(false);
-                this.colleagueButtonOk.setActivation(true);
+                this.textUsername.setActivation(false);
+                this.textPassword.setActivation(false);
+                this.buttonOk.setActivation(true);
             }
             else {                                                              // Login mode
-                this.colleagueTextUsername.setActivation(true);
-                this.colleagueTextPassword.setActivation(true);
+                this.textUsername.setActivation(true);
+                this.textPassword.setActivation(true);
 
                 // Judge whether the changed Colleage is enabled or disabled
-                if (this.colleagueTextUsername.isEmpty() === false
-                        && this.colleagueTextPassword.isEmpty() === false) {
-                    this.colleagueButtonOk.setActivation(true);
+                if (this.textUsername.isEmpty() === false
+                        && this.textPassword.isEmpty() === false) {
+                    this.buttonOk.setActivation(true);
                 }
                 else {
-                    this.colleagueButtonOk.setActivation(false);
+                    this.buttonOk.setActivation(false);
                 }
             }
         }

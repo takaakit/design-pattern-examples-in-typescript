@@ -14,9 +14,8 @@ export class LargeSizeChar {
     constructor(charName: string) {
         // ˅
         this.displayData = null;
-        
-        const fs = require('fs');
         try {
+            const fs = require('fs');
             const buf = fs.readFileSync(__dirname + '/big' + charName + '.txt', 'utf8');
             this.displayData = buf.toString();
         }

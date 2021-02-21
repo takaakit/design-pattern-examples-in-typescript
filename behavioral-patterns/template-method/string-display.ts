@@ -43,13 +43,11 @@ export class StringDisplay extends AbstractDisplay {
 
     private writeLine(): void {
         // ˅
-        var line: string = '';
-        line += '+';       // Display an end mark '+'
+        process.stdout.write('+');      // Display an end mark '+'
         for (let i = 0; i < this.width; i++) {
-            line += '-';   // Display a line '='
+            process.stdout.write('-');  // Display a line '-'
         }
-        line += '+';       // Display an end mark '+'
-        console.log(line);
+        console.log('+');               // Display an end mark '+'
         // ˄
     }
 

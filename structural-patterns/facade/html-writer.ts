@@ -15,7 +15,6 @@ export class HtmlWriter {
     constructor(writer: WriteStream) {
         // ˅
         this.writer = writer;
-        
         // ˄
     }
 
@@ -24,15 +23,15 @@ export class HtmlWriter {
         // ˅
         this.writer.write('<html>');
         this.writer.write('<head><title>' + title + '</title></head>');
-        this.writer.write('<body>' + '\n');
-        this.writer.write('<h1>' + title + '</h1>' + '\n');
+        this.writer.write('<body>\n');
+        this.writer.write('<h1>' + title + '</h1>\n');
         // ˄
     }
 
     // Write a paragraph
     paragraph(message: string): void {
         // ˅
-        this.writer.write('<p>' + message + '</p>' + '\n');
+        this.writer.write('<p>' + message + '</p>\n');
         // ˄
     }
 
@@ -53,7 +52,7 @@ export class HtmlWriter {
     close(): void {
         // ˅
         this.writer.write('</body>');
-        this.writer.write('</html>' + '\n');
+        this.writer.write('</html>\n');
         this.writer.end();
         // ˄
     }

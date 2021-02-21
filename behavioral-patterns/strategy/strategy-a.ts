@@ -20,21 +20,19 @@ export class StrategyA implements Strategy {
         // ˅
         this.won = false;
         this.preHand = Hand.getHand(Hand.ROCK);
+        
         // ˄
     }
 
     nextHand(): Hand {
         // ˅
-        if (this.won === false) {
-            this.preHand = Hand.getHand(Math.floor(Math.random() * 3));
-        }
-        return this.preHand;
+        throw new Error('Not implemented');
         // ˄
     }
 
     learn(win: boolean): void {
         // ˅
-        this.won = win;
+        throw new Error('Not implemented');
         // ˄
     }
 

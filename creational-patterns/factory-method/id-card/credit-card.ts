@@ -10,12 +10,12 @@ export class CreditCard implements Product {
     
     // ˄
 
-    readonly owner: string;
+    private readonly owner: string;
 
     constructor(owner: string) {
         // ˅
-        console.log('Make ' + owner + '\'s card.');
         this.owner = owner;
+        console.log('Make ' + owner + '\'s card.');
         // ˄
     }
 

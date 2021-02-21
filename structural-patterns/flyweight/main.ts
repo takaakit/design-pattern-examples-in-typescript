@@ -3,11 +3,17 @@
 
 import { LargeSizeString } from './large-size-string';
 
-if (process.argv.length != 3) {
-    console.log('Usage: node main.js digits');
-    console.log('Ex.  : node main.js 1212123');
-}
-else {
-    const bs = new LargeSizeString(process.argv[2]);
+console.log('Please enter digits (ex. 1212123):');
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+readline.question('', (data: any) => {
+    const input: string = data;
+    readline.close();
+
+    const bs = new LargeSizeString(input);
     bs.display();
-}
+});

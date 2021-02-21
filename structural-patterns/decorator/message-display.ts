@@ -11,7 +11,7 @@ export class MessageDisplay extends Display {
     // ˄
 
     // Message to be displayed
-    private message: string;
+    private readonly message: string;
 
     constructor(message: string) {
         // ˅

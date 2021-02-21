@@ -16,7 +16,6 @@ export abstract class Frame extends Display {
         // ˅
         super();
         this.display = display;
-        
         // ˄
     }
 

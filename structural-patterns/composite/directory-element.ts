@@ -10,14 +10,31 @@ export class DirectoryElement extends FileSystemElement {
     
     // ˄
 
+    private readonly _name: string;
+
     private readonly elements: Array<FileSystemElement>;
 
     constructor(name: string) {
         // ˅
         super();
+        this._name = name;
         this.elements = new Array<FileSystemElement>();
-        this.name = name;
-        this.size = 0;
+        // ˄
+    }
+
+    get name(): string {
+        // ˅
+        return this._name;
+        // ˄
+    }
+
+    get size(): number {
+        // ˅
+        var size: number = 0;
+        for (let i = 0; i < this.elements.length; i++) {
+            size += this.elements[i].size;
+        }
+        return size;
         // ˄
     }
 

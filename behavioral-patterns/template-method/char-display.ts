@@ -12,33 +12,28 @@ export class CharDisplay extends AbstractDisplay {
 
     private readonly charValue: string;
 
-    private outputString: string;
-
     constructor(charValue: string) {
         // ˅
         super();
         this.charValue = charValue;
-        this.outputString = '';
         // ˄
     }
 
     open(): void {
         // ˅
-        this.outputString += '<<';             // Display '<<' in the start characters.
+        process.stdout.write('<<');             // Display '<<' in the start characters.
         // ˄
     }
 
     write(): void {
         // ˅
-        this.outputString += this.charValue;   // Display the character.
+        process.stdout.write(this.charValue);   // Display the character.
         // ˄
     }
 
     close(): void {
         // ˅
-        this.outputString += '>>' + '\n';      // Display '>>' in the start characters.
-        console.log(this.outputString);
-        this.outputString = '';
+        console.log('>>');                      // Display '>>' in the start characters.
         // ˄
     }
 

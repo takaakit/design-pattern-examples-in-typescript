@@ -3,4 +3,4 @@
 
 import { PageCreator } from './page-creator';
 
-PageCreator.getInstance().createSimpleHomepage('emily@example.com', 'Homepage.html');
+PageCreator.createSimpleHomepage('emily@example.com', 'Homepage.html');

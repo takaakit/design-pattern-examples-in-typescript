@@ -12,30 +12,15 @@ export class CreditCardFactory extends Factory {
     
     // ˄
 
-    private cardOwners: Array<string>;
-
     constructor() {
         // ˅
         super();
-        this.cardOwners = new Array<string>();
         // ˄
     }
 
     createProduct(owner: string): Product {
         // ˅
         return new CreditCard(owner);
-        // ˄
-    }
-
-    registerProduct(product: Product): void {
-        // ˅
-        this.cardOwners.push((product as CreditCard).owner);
-        // ˄
-    }
-
-    getCardOwner(): Array<string> {
-        // ˅
-        return this.cardOwners;
         // ˄
     }
 

@@ -15,7 +15,6 @@ export class Display {
     constructor(impl: DisplayImpl) {
         // ˅
         this.impl = impl;
-        
         // ˄
     }
 

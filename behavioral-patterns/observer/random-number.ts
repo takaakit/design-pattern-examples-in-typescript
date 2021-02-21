@@ -20,9 +20,15 @@ export class RandomNumber extends ValueNumber {
     generate(): void {
         // ˅
 		for (let i: number = 0; i < 20; i++) {
-			this.valueNumber = Math.floor(Math.random() * 50);
+			this._valueNumber = Math.floor(Math.random() * 50);
 			super.notifyObservers();
 		}
+        // ˄
+    }
+
+    get valueNumber(): number {
+        // ˅
+        return this._valueNumber;
         // ˄
     }
 

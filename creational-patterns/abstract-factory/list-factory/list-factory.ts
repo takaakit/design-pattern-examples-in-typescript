@@ -11,7 +11,7 @@ import { ListPage } from './list-page';
 
 // ˄
 
-export class ListFactory extends Factory {
+export class ListFactory implements Factory {
     // ˅
     
     // ˄

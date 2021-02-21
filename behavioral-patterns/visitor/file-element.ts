@@ -11,6 +11,10 @@ export class FileElement extends FileSystemElement {
     
     // ˄
 
+    private readonly _name: string;
+
+    private readonly _size: number;
+
     constructor(name: string, size: number) {
         // ˅
         super();

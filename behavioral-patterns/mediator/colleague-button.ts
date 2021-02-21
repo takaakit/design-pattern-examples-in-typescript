@@ -2,7 +2,6 @@
 'use strict';
 
 import { Colleague } from './colleague';
-import { Mediator } from './mediator';
 
 // ˄
 
@@ -16,7 +15,6 @@ export class ColleagueButton extends Colleague {
     constructor(button: HTMLButtonElement) {
         // ˅
         super();
-        this.mediator = null;
         this.button = button;
         this.button.addEventListener('click', (event) => this.clickButton(event));
         // ˄
@@ -31,7 +29,7 @@ export class ColleagueButton extends Colleague {
 
     private clickButton(event: MouseEvent): void {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

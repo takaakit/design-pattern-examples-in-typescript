@@ -10,14 +10,10 @@ export class PlainTextBuilder implements Builder {
     
     // ˄
 
-    // String to output
-    result: string;
-
     private builder: Array<string>;
 
     constructor() {
         // ˅
-        this.result = '';
         this.builder = new Array<string>();
         // ˄
     }
@@ -52,7 +48,13 @@ export class PlainTextBuilder implements Builder {
     close(): void {
         // ˅
         this.builder.push('--------------------------------');  // Decoration line
-        this.result = this.builder.join('\n');
+        // ˄
+    }
+
+    // String to output
+    getContent(): string {
+        // ˅
+        return this.builder.join('\n');
         // ˄
     }
 

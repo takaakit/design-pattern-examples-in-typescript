@@ -2,7 +2,6 @@
 'use strict';
 
 import { Colleague } from './colleague';
-import { Mediator } from './mediator';
 
 // ˄
 
@@ -16,7 +15,6 @@ export class ColleagueRadioButton extends Colleague {
     constructor(radioButton: HTMLButtonElement) {
         // ˅
         super();
-        this.mediator = null;
         this.radioButton = radioButton;
         this.radioButton.addEventListener('click', (event) => this.clickRadioButton(event));
         // ˄
@@ -31,7 +29,7 @@ export class ColleagueRadioButton extends Colleague {
 
     private clickRadioButton(event: MouseEvent): void {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

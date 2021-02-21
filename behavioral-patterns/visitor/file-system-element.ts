@@ -11,10 +11,6 @@ export abstract class FileSystemElement implements Element {
     
     // ˄
 
-    protected _name: string;
-
-    protected _size: number;
-
     abstract get name(): string;
 
     abstract get size(): number;

@@ -11,18 +11,20 @@ export abstract class ValueNumber {
     
     // ˄
 
-    valueNumber: number;
+    protected _valueNumber: number;
 
     private observers: Array<Observer>;
 
     constructor() {
         // ˅
 		this.observers = new Array<Observer>();
-		this.valueNumber = 0;
+		this._valueNumber = 0;
         // ˄
     }
 
     abstract generate(): void;
+
+    abstract get valueNumber(): number;
 
     addObserver(observer: Observer): void {
         // ˅

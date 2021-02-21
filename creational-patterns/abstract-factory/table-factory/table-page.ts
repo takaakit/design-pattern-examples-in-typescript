@@ -19,16 +19,16 @@ export class TablePage extends Page {
     toHTML(): string {
         // ˅
         const htmlData: Array<string> = new Array<string>();
-        htmlData.push('<html><head><title>' + this.title + '</title></head><body>');
-        htmlData.push('<h1>' + this.title + '</h1>');
-        htmlData.push('<table width="80%" border="3">');
+        htmlData.push('<html><head><title>' + this.title + '</title></head><body>\n');
+        htmlData.push('<h1>' + this.title + '</h1>\n');
+        htmlData.push('<table width="80%" border="3">\n');
         for (let content of this.contents) {
-            htmlData.push('<tr>' + content.toHTML() + '</tr>');
+            htmlData.push('<tr>' + content.toHTML() + '</tr>\n');
         }
-        htmlData.push('</table>');
-        htmlData.push('<hr><address>' + this.author + '</address>');
-        htmlData.push('</body></html');
-        return htmlData.join('\n');
+        htmlData.push('</table>\n');
+        htmlData.push('<hr><address>' + this.author + '</address>\n');
+        htmlData.push('</body></html>\n');
+        return htmlData.join('');
         // ˄
     }
 

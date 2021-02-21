@@ -8,9 +8,9 @@ export abstract class FileSystemElement {
     
     // ˄
 
-    protected name: string;
+    abstract get name(): string;
 
-    protected size: number;
+    abstract get size(): number;
 
     // Print this element with the "upperPath".
     abstract print(upperPath: string): void;

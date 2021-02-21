@@ -27,8 +27,8 @@ export class ListPage extends Page {
         }
         htmlData.push('</ul>');
         htmlData.push('<hr><address>' + this.author + '</address>');
-        htmlData.push('</body></html>');
-        return htmlData.join('\n');
+        htmlData.push('</body></html>\n');
+        return htmlData.join('');
         // ˄
     }
 

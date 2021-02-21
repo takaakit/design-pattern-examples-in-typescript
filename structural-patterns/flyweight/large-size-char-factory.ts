@@ -10,32 +10,15 @@ export class LargeSizeCharFactory {
     
     // ˄
 
-    private poolChars: Map<string, LargeSizeChar>;
-
-    private static readonly instance: LargeSizeCharFactory = new LargeSizeCharFactory();
-
-    private constructor() {
-        // ˅
-        this.poolChars = new Map<string, LargeSizeChar>();
-        // ˄
-    }
-
-    static getInstance(): LargeSizeCharFactory {
-        // ˅
-        return this.instance;
-        // ˄
-    }
+    private static poolChars: Map<string, LargeSizeChar> = new Map<string, LargeSizeChar>();
 
     // Create an instance of the large size character.
-    getLargeSizeChar(charName: string): LargeSizeChar {
+    static getLargeSizeChar(charName: string): LargeSizeChar {
         // ˅
-        var lsc: LargeSizeChar = null;
-        if (this.poolChars.has(charName) === false) {
+        var lsc: LargeSizeChar = this.poolChars.get(charName);
+        if (lsc === undefined) {
             lsc = new LargeSizeChar(charName);  // Create an instance
             this.poolChars.set(charName, lsc);
-        }
-        else {
-            lsc = this.poolChars.get(charName);
         }
         return lsc;
         // ˄

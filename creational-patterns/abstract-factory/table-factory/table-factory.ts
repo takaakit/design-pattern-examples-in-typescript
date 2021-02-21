@@ -11,7 +11,7 @@ import { TablePage } from './table-page';
 
 // ˄
 
-export class TableFactory extends Factory {
+export class TableFactory implements Factory {
     // ˅
     
     // ˄

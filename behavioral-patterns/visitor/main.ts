@@ -6,29 +6,26 @@ import { FileElement } from './file-element';
 import { ListVisitor } from './list-visitor';
 
 console.log('Create a file system...');
-const rootDir: DirectoryElement = new DirectoryElement('root');
-const homeDir: DirectoryElement = new DirectoryElement('home');
 const binDir: DirectoryElement = new DirectoryElement('bin');
-const etcDir: DirectoryElement = new DirectoryElement('etc');
+const lsFile: FileElement = new FileElement('ls', 20);
+binDir.add(lsFile);
+const mkdirFile = new FileElement('mkdir', 40);
+binDir.add(mkdirFile);
+
 const emilyDir: DirectoryElement = new DirectoryElement('emily');
+const homeworkFile = new FileElement('homework.doc', 60);
+emilyDir.add(homeworkFile);
+
 const jamesDir: DirectoryElement = new DirectoryElement('james');
-const oliviaDir: DirectoryElement = new DirectoryElement('olivia');
+const appFile = new FileElement('app.exe', 80);
+jamesDir.add(appFile);
 
-rootDir.add(homeDir);
-rootDir.add(binDir);
-rootDir.add(etcDir);
-
-binDir.add(new FileElement('ls', 100));
-binDir.add(new FileElement('mkdir', 50));
+const homeDir: DirectoryElement = new DirectoryElement('home');
 homeDir.add(emilyDir);
 homeDir.add(jamesDir);
-homeDir.add(oliviaDir);
 
-emilyDir.add(new FileElement('homework.doc', 40));
-jamesDir.add(new FileElement('homework.doc', 50));
-jamesDir.add(new FileElement('app.exe', 60));
-oliviaDir.add(new FileElement('homework.doc', 70));
-oliviaDir.add(new FileElement('app.exe', 80));
-oliviaDir.add(new FileElement('tips.html', 90));
+const rootDir: DirectoryElement = new DirectoryElement('root');
+rootDir.add(homeDir);
+rootDir.add(binDir);
 
 rootDir.accept(new ListVisitor());

@@ -38,10 +38,12 @@ export abstract class Page {
         const fileName = this.title + '.html';
         try {
             fs.writeFileSync(fileName, this.toHTML());
-            console.log(fileName + ' has been created.');
         } catch(e) {
             console.error(e);
         }
+        console.log(fileName + ' has been created.');
+        const path = require('path');
+        console.log('Output File: ' + path.join(process.cwd(), fileName));
         // ˄
     }
 

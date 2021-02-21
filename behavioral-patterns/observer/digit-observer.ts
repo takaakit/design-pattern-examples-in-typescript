@@ -15,6 +15,9 @@ export class DigitObserver implements Observer {
     update(value: ValueNumber): void {
         // ˅
 		console.log('Digit    : ' + value.valueNumber);
+
+        const sleep: any = require('sleep');
+        sleep.msleep(100);   // Wait 100ms
         // ˄
     }
 

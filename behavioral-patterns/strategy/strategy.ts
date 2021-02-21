@@ -1,15 +1,18 @@
 // ˅
 'use strict';
 
-import { Hand } from './hand';
+import { HandSignal } from './hand-signal';
+import { GameResultType } from './game-result-type';
 
 // ˄
 
 export interface Strategy {
 
-    nextHand(): Hand;
+    // Show a hand signal.
+    showHandSignal(): HandSignal;
 
-    learn(win: boolean): void;
+    // Notify a game result.
+    notifyGameResult(result: GameResultType, ownHand: HandSignal, opponentsHand: HandSignal): void;
 
     // ˅
     

@@ -7,7 +7,7 @@ import { BarChartObserver } from './bar-chart-observer';
 
 const randomNumber: RandomNumber = new RandomNumber();
 const digitObserver: DigitObserver = new DigitObserver();
-const barChartObserver: BarChartObserver = new BarChartObserver();
 randomNumber.addObserver(digitObserver);
+const barChartObserver: BarChartObserver = new BarChartObserver();
 randomNumber.addObserver(barChartObserver);
 randomNumber.generate();

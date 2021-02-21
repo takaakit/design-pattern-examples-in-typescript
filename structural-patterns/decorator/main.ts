@@ -9,26 +9,8 @@ import { FullFrame } from './full-frame';
 const displayA: Display = new MessageDisplay('Nice to meet you.');
 displayA.show();
 
-const displayB: Display = new SideFrame(displayA, '!');
+const displayB: Display = new SideFrame(new MessageDisplay('Nice to meet you.'), '!');
 displayB.show();
 
-const displayC: Display = new FullFrame(displayB);
+const displayC: Display = new FullFrame(new SideFrame(new MessageDisplay('Nice to meet you.'), '!'));
 displayC.show();
-
-const displayD: Display = new SideFrame(
-    new FullFrame(
-        new FullFrame(
-            new SideFrame(
-                new SideFrame(
-                    new FullFrame(
-                        new MessageDisplay('See you again.')
-                    ),
-                    '#'
-                ),
-                '#'
-            )
-        )
-    ),
-    '#'
-);
-displayD.show();

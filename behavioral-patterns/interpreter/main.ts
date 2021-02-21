@@ -19,7 +19,7 @@ After  : [program [repeat 4 [forward, right]]]
 'use strict';
 
 import { Node } from './node';
-import { Head } from './head';
+import { Program } from './program';
 import { Context } from './context';
 
 import fs = require('fs');
@@ -28,8 +28,8 @@ import readline = require('readline');
 const stream = fs.createReadStream(__dirname + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });
 reader.on('line', (line: string) => {
-	console.log('TEXT > "' + line + '"');
-	const node: Node = new Head();
+	console.log('Before parsing : ' + line);
+	const node: Node = new Program();
 	node.parse(new Context(line));
-	console.log('NODE > ' + node);
+	console.log('After parsing  : ' + node);
 });

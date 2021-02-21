@@ -19,6 +19,9 @@ export class BarChartObserver implements Observer {
 			barChart += '*';
 		}
 		console.log(barChart);
+
+        const sleep: any = require('sleep');
+        sleep.msleep(100);   // Wait 100ms
         // ˄
     }
 

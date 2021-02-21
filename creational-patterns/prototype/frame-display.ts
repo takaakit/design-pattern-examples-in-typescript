@@ -15,7 +15,6 @@ export class FrameDisplay implements Display {
     constructor(borderChar: string) {
         // ˅
         this.borderChar = borderChar;
-        
         // ˄
     }
 
@@ -28,17 +27,15 @@ export class FrameDisplay implements Display {
     show(message: string): void {
         // ˅
         const length: number = message.length;
-        var upperLine: string = '';
         for (let i = 0; i < length + 4; i++) {
-            upperLine += this.borderChar;
+            process.stdout.write(this.borderChar);
         }
-        console.log(upperLine);
+        console.log();
         console.log(this.borderChar + ' ' + message + ' ' + this.borderChar);
-        var buttonLine: string = '';
         for (var i = 0; i < length + 4; i++) {
-            buttonLine += this.borderChar;
+            process.stdout.write(this.borderChar);
         }
-        console.log(buttonLine);
+        console.log();
         // ˄
     }
 

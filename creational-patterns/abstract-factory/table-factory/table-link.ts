@@ -18,7 +18,7 @@ export class TableLink extends Link {
 
     toHTML(): string {
         // ˅
-        return '  <td><a href="' + this.url + '">' + this.name + '</a></td>' + '\n'
+        return '  <td><a href="' + this.url + '">' + this.name + '</a></td>\n'
         // ˄
     }
 

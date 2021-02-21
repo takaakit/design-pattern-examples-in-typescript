@@ -15,7 +15,6 @@ export class UnderlineDisplay implements Display {
     constructor(underlineChar: string) {
         // ˅
         this.underlineChar = underlineChar;
-        
         // ˄
     }
 
@@ -29,11 +28,11 @@ export class UnderlineDisplay implements Display {
         // ˅
         const length: number = message.length;
         console.log('"' + message + '"');
-        var line: string = ' ';
+        process.stdout.write(' ');
         for (let i = 0; i < length; i++) {
-            line += this.underlineChar;
+            process.stdout.write(this.underlineChar);
         }
-        console.log(line);
+        console.log();
         // ˄
     }
 

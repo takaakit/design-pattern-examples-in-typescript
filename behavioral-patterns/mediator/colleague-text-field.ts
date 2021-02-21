@@ -2,7 +2,6 @@
 'use strict';
 
 import { Colleague } from './colleague';
-import { Mediator } from './mediator';
 
 // ˄
 
@@ -16,7 +15,6 @@ export class ColleagueTextField extends Colleague {
     constructor(textArea: HTMLTextAreaElement) {
         // ˅
         super();
-        this.mediator = null;
         this.textArea = textArea;
         this.textArea.addEventListener('input', (event) => this.inputTextArea(event));
         // ˄
@@ -37,7 +35,7 @@ export class ColleagueTextField extends Colleague {
 
     private inputTextArea(event: Event): void {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

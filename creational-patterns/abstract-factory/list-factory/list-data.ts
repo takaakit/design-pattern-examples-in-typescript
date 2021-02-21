@@ -23,8 +23,8 @@ export class ListData extends Data {
         for (let item of this.items) {
             htmlData.push(item.toHTML());
         }
-        htmlData.push('</ul></li>');
-        return htmlData.join('\n');
+        htmlData.push('</ul></li>\n');
+        return htmlData.join('');
         // ˄
     }
 

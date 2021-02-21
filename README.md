@@ -13,7 +13,7 @@ You can utilize this examples as follows.
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > TypeScript code example:
 
@@ -67,10 +67,11 @@ Installation
 **Development Environment for TypeScript**
 * Install [Visual Studio Code](https://code.visualstudio.com/download).
 * Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
-* After installing Node.js, install TypeScript and Node type definitions with the following commands using Node Package Manager (NPM).  
+* After installing Node.js, install TypeScript, Node type definitions, and Sleep module with the following commands using Node Package Manager (NPM).  
 `npm install -g typescript`  
-`cd <this directory>`  
-`npm install @types/node`
+`cd <this directory (design-pattern-examples-in-typescript)>`  
+`npm install @types/node`  
+`npm install sleep`  
 
 Usage
 -----

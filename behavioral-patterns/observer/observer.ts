@@ -1,7 +1,6 @@
 // ˅
 'use strict';
 
-import { Observer } from './observer';
 import { ValueNumber } from './value-number';
 
 // ˄

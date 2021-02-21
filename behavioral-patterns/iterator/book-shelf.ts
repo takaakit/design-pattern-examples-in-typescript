@@ -13,14 +13,14 @@ export class BookShelf implements Aggregate {
     
     // ˄
 
-    numberOfBooks: number;
+    private _numberOfBooks: number;
 
     private readonly books: Array<Book>;
 
     constructor(maxsize: number) {
         // ˅
 		this.books = new Array<Book>(maxsize);
-		this.numberOfBooks = 0;
+		this._numberOfBooks = 0;
         // ˄
     }
 
@@ -38,8 +38,14 @@ export class BookShelf implements Aggregate {
 
     add(book: Book): void {
         // ˅
-		this.books[this.numberOfBooks] = book;
-		this.numberOfBooks++;
+		this.books[this._numberOfBooks] = book;
+		this._numberOfBooks++;
+        // ˄
+    }
+
+    get numberOfBooks(): number {
+        // ˅
+        return this._numberOfBooks;
         // ˄
     }
 

@@ -31,9 +31,10 @@ export class CommandList implements Node {
 				break;
 			}
 			else {
-				const command: Command = new Command();
-				command.parse(context);
-				this.nodes.push(command);
+				const aCommand: Command = new Command();
+				aCommand.parse(context);
+
+				this.nodes.push(aCommand);  // Hold the parsed node
 			}
 		}
         // ˄
@@ -41,7 +42,7 @@ export class CommandList implements Node {
 
     toString(): string {
         // ˅
-		return this.nodes.join(', ');
+		return '[' + this.nodes.join(', ') + ']';
         // ˄
     }
 

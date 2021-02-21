@@ -11,14 +11,22 @@ export class DirectoryElement extends FileSystemElement {
     
     // ˄
 
+    private readonly _name: string;
+
     // Collection of elements
-    elements: Array<FileSystemElement>;
+    private readonly _elements: Array<FileSystemElement>;
 
     constructor(name: string) {
         // ˅
         super();
         this._name = name;
-        this.elements = new Array<FileSystemElement>();
+        this._elements = new Array<FileSystemElement>();
+        // ˄
+    }
+
+    get elements(): Array<FileSystemElement> {
+        // ˅
+        return this._elements;
         // ˄
     }
 

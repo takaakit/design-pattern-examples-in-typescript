@@ -28,16 +28,23 @@ export class RealPrinter implements Printer {
     // Display a content with the name
     output(content: string): void {
         // ˅
-        console.log('=== ' + this.printerName + ' ===');
+        console.log('==========');
         console.log(content);
+        console.log('Printed by ' + this._printerName);
+        console.log('==========');
         // ˄
     }
 
     // Heavy task (Please think so...)
     private heavyTask(message: string): void {
         // ˅
-        console.log(message);
-        console.log('Done heavy task.');
+        process.stdout.write(message);
+        const sleep: any = require('sleep');
+        for(var i = 0; i < 10; i++){
+            sleep.msleep(500);   // Wait 500ms
+            process.stdout.write('.');
+        }
+        console.log('Done.');
         // ˄
     }
 

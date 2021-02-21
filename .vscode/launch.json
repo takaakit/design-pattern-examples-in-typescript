@@ -7,7 +7,11 @@
             "name": "Launch behavioral-patterns/chain-of-responsibility",
             "program": "${workspaceFolder}/behavioral-patterns/chain-of-responsibility/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/chain-of-responsibility/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "chrome",
@@ -15,7 +19,11 @@
             "name": "Launch behavioral-patterns/command",
             "url": "http://localhost:5500/behavioral-patterns/command/command-example.html",
             "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "tsc: build - behavioral-patterns/command/tsconfig.json"
+            "preLaunchTask": "tsc: build - behavioral-patterns/command/tsconfig.json",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -23,7 +31,11 @@
             "name": "Launch behavioral-patterns/interpreter",
             "program": "${workspaceFolder}/behavioral-patterns/interpreter/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/interpreter/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -31,7 +43,11 @@
             "name": "Launch behavioral-patterns/iterator",
             "program": "${workspaceFolder}/behavioral-patterns/iterator/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/iterator/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "chrome",
@@ -39,7 +55,11 @@
             "name": "Launch behavioral-patterns/mediator",
             "url": "http://localhost:5500/behavioral-patterns/mediator/mediator-example.html",
             "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "tsc: build - behavioral-patterns/mediator/tsconfig.json"
+            "preLaunchTask": "tsc: build - behavioral-patterns/mediator/tsconfig.json",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -47,7 +67,11 @@
             "name": "Launch behavioral-patterns/memento",
             "program": "${workspaceFolder}/behavioral-patterns/memento/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/memento/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -55,7 +79,11 @@
             "name": "Launch behavioral-patterns/observer",
             "program": "${workspaceFolder}/behavioral-patterns/observer/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/observer/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "chrome",
@@ -63,7 +91,11 @@
             "name": "Launch behavioral-patterns/state",
             "url": "http://localhost:5500/behavioral-patterns/state/state-example.html",
             "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "tsc: build - behavioral-patterns/state/tsconfig.json"
+            "preLaunchTask": "tsc: build - behavioral-patterns/state/tsconfig.json",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -71,7 +103,11 @@
             "name": "Launch behavioral-patterns/strategy",
             "program": "${workspaceFolder}/behavioral-patterns/strategy/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/strategy/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -79,7 +115,11 @@
             "name": "Launch behavioral-patterns/template-method",
             "program": "${workspaceFolder}/behavioral-patterns/template-method/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/template-method/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -87,7 +127,11 @@
             "name": "Launch behavioral-patterns/visitor",
             "program": "${workspaceFolder}/behavioral-patterns/visitor/main.js",
             "preLaunchTask": "tsc: build - behavioral-patterns/visitor/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -95,7 +139,11 @@
             "name": "Launch creational-patterns/abstract-factory",
             "program": "${workspaceFolder}/creational-patterns/abstract-factory/main.js",
             "preLaunchTask": "tsc: build - creational-patterns/abstract-factory/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -103,7 +151,11 @@
             "name": "Launch creational-patterns/builder",
             "program": "${workspaceFolder}/creational-patterns/builder/main.js",
             "preLaunchTask": "tsc: build - creational-patterns/builder/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -111,7 +163,11 @@
             "name": "Launch creational-patterns/factory-method",
             "program": "${workspaceFolder}/creational-patterns/factory-method/main.js",
             "preLaunchTask": "tsc: build - creational-patterns/factory-method/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -119,7 +175,11 @@
             "name": "Launch creational-patterns/prototype",
             "program": "${workspaceFolder}/creational-patterns/prototype/main.js",
             "preLaunchTask": "tsc: build - creational-patterns/prototype/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -127,7 +187,11 @@
             "name": "Launch creational-patterns/singleton",
             "program": "${workspaceFolder}/creational-patterns/singleton/main.js",
             "preLaunchTask": "tsc: build - creational-patterns/singleton/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -135,7 +199,11 @@
             "name": "Launch structural-patterns/adapter",
             "program": "${workspaceFolder}/structural-patterns/adapter/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/adapter/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -143,7 +211,11 @@
             "name": "Launch structural-patterns/bridge",
             "program": "${workspaceFolder}/structural-patterns/bridge/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/bridge/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -151,7 +223,11 @@
             "name": "Launch structural-patterns/composite",
             "program": "${workspaceFolder}/structural-patterns/composite/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/composite/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -159,7 +235,11 @@
             "name": "Launch structural-patterns/decorator",
             "program": "${workspaceFolder}/structural-patterns/decorator/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/decorator/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -167,7 +247,11 @@
             "name": "Launch structural-patterns/facade",
             "program": "${workspaceFolder}/structural-patterns/facade/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/facade/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -175,7 +259,11 @@
             "name": "Launch structural-patterns/flyweight",
             "program": "${workspaceFolder}/structural-patterns/flyweight/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/flyweight/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         },
         {
             "type": "node",
@@ -183,7 +271,11 @@
             "name": "Launch structural-patterns/proxy",
             "program": "${workspaceFolder}/structural-patterns/proxy/main.js",
             "preLaunchTask": "tsc: build - structural-patterns/proxy/tsconfig.json",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         }
     ]
 }

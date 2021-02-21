@@ -18,7 +18,7 @@ export class PaintingCommand implements Command {
     // Painting position y
     private readonly paintingPosY: number;
 
-    protected paintingTarget: PaintingTarget;
+    private paintingTarget: PaintingTarget;
 
     constructor(paintingObject: PaintingTarget, paintingPosX: number, paintingPosY: number) {
         // ˅

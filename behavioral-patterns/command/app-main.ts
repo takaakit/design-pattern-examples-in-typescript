@@ -12,12 +12,6 @@ export class AppMain {
     
     // ˄
 
-    private readonly canvas: HTMLCanvasElement;
-
-    private readonly undoButton: HTMLButtonElement;
-
-    private readonly clearButton: HTMLButtonElement;
-
     private isDragging: boolean;
 
     // Painting history
@@ -25,13 +19,19 @@ export class AppMain {
 
     private readonly paintingCanvas: PaintingCanvas;
 
+    private readonly canvas: HTMLCanvasElement;
+
+    private readonly undoButton: HTMLButtonElement;
+
+    private readonly clearButton: HTMLButtonElement;
+
     constructor() {
         // ˅
         this.canvas = <HTMLCanvasElement>document.getElementById('canvas');
         this.undoButton = <HTMLButtonElement>document.getElementById('undoButton')
         this.clearButton = <HTMLButtonElement>document.getElementById('clearButton')
         this.history = new HistoryCommand();
-        this.paintingCanvas = new PaintingCanvas(this.canvas, this.canvas.getContext('2d'));
+        this.paintingCanvas = new PaintingCanvas(this.canvas.getContext('2d'), this.canvas.width, this.canvas.height);
 
         this.canvas.addEventListener('mousedown', () => this.onMouseDown());
         this.canvas.addEventListener('mousemove', (event) => this.onMouseMove(event));

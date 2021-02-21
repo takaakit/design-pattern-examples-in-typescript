@@ -38,7 +38,7 @@ export class AppLogin implements Mediator {
         this.buttonOk.mediator = this;
         this.buttonCancel.mediator = this;
 
-        // Generate a click event of the guest radio button.
+        // Generate a click event of the Guest radio button.
         (<HTMLButtonElement>document.getElementById('radioGuest')).click();
         // ˄
     }

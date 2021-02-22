@@ -1,20 +1,20 @@
 // ˅
 'use strict';
 
-import { ValueNumber } from './value-number';
+import { NumberValue } from './number-value';
 import { Observer } from './observer';
 
 // ˄
 
-// Display values with digits.
+// Display number values with digits.
 export class DigitObserver implements Observer {
     // ˅
     
     // ˄
 
-    update(value: ValueNumber): void {
+    update(numberValue: NumberValue): void {
         // ˅
-		console.log('Digit    : ' + value.valueNumber);
+		console.log('Digit    : ' + numberValue.value);
 
         const sleep: any = require('sleep');
         sleep.msleep(100);   // Wait 100ms

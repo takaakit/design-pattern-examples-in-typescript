@@ -21,7 +21,7 @@ export class LimitedSupporter extends Supporter {
     }
 
     // Troubles with an ID below the limit are handled.
-    handle(trouble: Trouble): boolean {
+    canHandle(trouble: Trouble): boolean {
         // ˅
         return trouble.id <= this.limitId;
         // ˄

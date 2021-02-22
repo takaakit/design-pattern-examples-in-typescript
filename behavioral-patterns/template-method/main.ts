@@ -1,4 +1,6 @@
-// Display the character and string repeatedly 5 times.
+/*
+Display a character or string repeatedly 5 times.
+ */
 'use strict';
 
 import { AbstractDisplay } from './abstract-display';

@@ -24,8 +24,11 @@ export class Program implements Node {
     parse(context: Context): void {
         // ˅
 		context.slideToken('program');
-		this.commandList = new CommandList();
-		this.commandList.parse(context);
+
+        const aCommandList: CommandList = new CommandList();
+		aCommandList.parse(context);
+
+		this.commandList = aCommandList;    // Hold the parsed command list
         // ˄
     }
 

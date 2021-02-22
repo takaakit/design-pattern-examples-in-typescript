@@ -1,7 +1,12 @@
-// Create a hierarchical link collection as an HTML file.
+/*
+Create a hierarchical link collection as an HTML file. It can be created in either tabular or list format.
+ */
 'use strict';
 
 import { Factory } from './factory/factory';
+import { Data } from './factory/data';
+import { Link } from './factory/link';
+import { Page } from './factory/page';
 import { ListFactory } from './list-factory/list-factory';
 import { TableFactory } from './table-factory/table-factory';
 
@@ -34,23 +39,23 @@ readline.question('', (data: any) => {
         process.exit(1);
     }
 
-    const washingtonPost = factory.createLink('The Washington Post', 'https://www.washingtonpost.com/');
-    const newYorkTimes = factory.createLink('The NewYork Times', 'https://www.nytimes.com/');
-    const financialTimes = factory.createLink('The Financial Times', 'https://www.ft.com/');
+    const washingtonPost: Link = factory.createLink('The Washington Post', 'https://www.washingtonpost.com/');
+    const newYorkTimes: Link = factory.createLink('The NewYork Times', 'https://www.nytimes.com/');
+    const financialTimes: Link = factory.createLink('The Financial Times', 'https://www.ft.com/');
 
-    const newspaper = factory.createData('Newspaper');
+    const newspaper: Data = factory.createData('Newspaper');
     newspaper.add(washingtonPost);
     newspaper.add(newYorkTimes);
     newspaper.add(financialTimes);
 
-    const yahoo = factory.createLink('Yahoo!', 'https://www.yahoo.com/');
-    const google = factory.createLink('Google', 'https://www.google.com/');
+    const yahoo: Link = factory.createLink('Yahoo!', 'https://www.yahoo.com/');
+    const google: Link = factory.createLink('Google', 'https://www.google.com/');
 
-    const searchEngine = factory.createData('Search engine');
+    const searchEngine: Data = factory.createData('Search engine');
     searchEngine.add(yahoo);
     searchEngine.add(google);
 
-    const linkPage = factory.createPage('LinkPage', 'James Smith');
+    const linkPage: Page = factory.createPage('LinkPage', 'James Smith');
     linkPage.add(newspaper);
     linkPage.add(searchEngine);
 

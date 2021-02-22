@@ -18,7 +18,7 @@ export class LazySupporter extends Supporter {
     }
 
     // No troubles are handled.
-    handle(trouble: Trouble): boolean {
+    canHandle(trouble: Trouble): boolean {
         // ˅
         return false;
         // ˄

@@ -16,6 +16,7 @@ export class PageCreator {
         // ˅
         const addressBook: Map<string, string> = DataLibrary.getData(__dirname + '/addressbook.txt');
         const userName: string = addressBook.get(mailAddress);
+        
         const writer: HtmlWriter = new HtmlWriter(fs.createWriteStream(htmlFileName, 'utf8'));
         writer.heading(userName + '\'s homepage');
         writer.paragraph('Welcome to ' + userName + '\'s homepage.');

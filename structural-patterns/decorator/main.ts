@@ -1,4 +1,6 @@
-// Display a character string with a decorative frame.
+/*
+Display a string with decorative frames. The frames can be combined arbitrarily.
+ */
 'use strict';
 
 import { Display } from './display';

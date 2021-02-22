@@ -5,30 +5,30 @@ import { Observer } from './observer';
 
 // ˄
 
-// An abstract class that generates numbers.
-export abstract class ValueNumber {
+// An abstract class that generates number value.
+export abstract class NumberValue {
     // ˅
     
     // ˄
 
-    protected _valueNumber: number;
+    protected _value: number;
 
     private observers: Array<Observer>;
 
     constructor() {
         // ˅
-		this.observers = new Array<Observer>();
-		this._valueNumber = 0;
+        this.observers = new Array<Observer>();
+        this._value = 0;
         // ˄
     }
 
     abstract generate(): void;
 
-    abstract get valueNumber(): number;
+    abstract get value(): number;
 
     addObserver(observer: Observer): void {
         // ˅
-		this.observers.push(observer);
+        this.observers.push(observer);
         // ˄
     }
 

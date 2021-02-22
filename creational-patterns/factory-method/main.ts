@@ -1,4 +1,6 @@
-// Factory to make ID cards.
+/*
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+ */
 'use strict';
 
 import { Factory } from './framework/factory';

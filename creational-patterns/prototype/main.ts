@@ -1,4 +1,6 @@
-// Display a character string enclosed with a frame line, or drawn with an underline.
+/*
+Display a string enclosed with a frame line, or drawn with an underline. The client("Main") registers instances of the "Display" subclass in the "Manager" class. When necessary, the "Manager" class asks those registered instances to return a clone. The client("Main") requires the returned clones to display.
+ */
 'use strict';
 
 import { Manager } from './framework/manager';

@@ -59,7 +59,7 @@ export class AppLogin implements Mediator {
         // ˅
         if (event.currentTarget === document.getElementById('buttonOk')
                 || event.currentTarget === document.getElementById('buttonCancel')) {
-            document.body.innerHTML = "<h1>Dialog terminated.</h1>"
+            document.body.innerHTML = '<h1>Dialog terminated.</h1>'     // Display a termination message
         }
         else {
             if (event.currentTarget === document.getElementById('radioGuest')) { // Guest mode

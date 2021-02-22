@@ -15,7 +15,7 @@ export class CreditCard implements Product {
     constructor(owner: string) {
         // ˅
         this.owner = owner;
-        console.log('Make ' + owner + '\'s card.');
+        console.log('Make ' + this.owner + '\'s card.');
         // ˄
     }
 

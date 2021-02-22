@@ -1,4 +1,6 @@
-// Visitors visit a file system composed of files and directories, and displays a list of files/directories.
+/*
+Visitor visits the file system composed of files and directories, and displays a list of files/directories.
+ */
 'use strict';
 
 import { DirectoryElement } from './directory-element';

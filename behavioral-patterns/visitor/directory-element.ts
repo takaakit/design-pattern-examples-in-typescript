@@ -14,19 +14,20 @@ export class DirectoryElement extends FileSystemElement {
     private readonly _name: string;
 
     // Collection of elements
-    private readonly _elements: Array<FileSystemElement>;
+    private readonly elements: Array<FileSystemElement>;
 
     constructor(name: string) {
         // ˅
         super();
         this._name = name;
-        this._elements = new Array<FileSystemElement>();
+        this.elements = new Array<FileSystemElement>();
         // ˄
     }
 
-    get elements(): Array<FileSystemElement> {
+    // Accept a visitor
+    accept(visitor: Visitor): void {
         // ˅
-        return this._elements;
+        visitor.visitDirectory(this);
         // ˄
     }
 
@@ -47,18 +48,17 @@ export class DirectoryElement extends FileSystemElement {
         // ˄
     }
 
-    // Accept a visitor
-    accept(visitor: Visitor): void {
-        // ˅
-        visitor.visitDirectory(this);
-        // ˄
-    }
-
     // Add an entry
     add(element: FileSystemElement): FileSystemElement {
         // ˅
         this.elements.push(element);
         return this;
+        // ˄
+    }
+
+    iterator(): IterableIterator<FileSystemElement> {
+        // ˅
+        return this.elements[Symbol.iterator]();
         // ˄
     }
 

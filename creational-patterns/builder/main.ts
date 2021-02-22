@@ -1,4 +1,6 @@
-// Create documents in HTML format and text format.
+/*
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+ */
 'use strict';
 
 import { HTMLBuilder } from './hTML-builder';
@@ -20,6 +22,7 @@ readline.question('', (data: any) => {
         const plainTextBuilder: PlainTextBuilder = new PlainTextBuilder();
         const directory: Director = new Director(plainTextBuilder);
         directory.build();
+
         const content: string = plainTextBuilder.getContent();
         console.log(content);
     }
@@ -27,6 +30,7 @@ readline.question('', (data: any) => {
         const htmlBuilder: HTMLBuilder = new HTMLBuilder();
         const directory: Director = new Director(htmlBuilder);
         directory.build();
+        
         const fileName: string = htmlBuilder.getFileName();
         console.log(fileName + ' has been created.');
         const path = require('path');

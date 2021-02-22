@@ -1,13 +1,13 @@
 // ˅
 'use strict';
 
-import { ValueNumber } from './value-number';
+import { NumberValue } from './number-value';
 
 // ˄
 
 export interface Observer {
 
-    update(value: ValueNumber): void;
+    update(numberValue: NumberValue): void;
 
     // ˅
     

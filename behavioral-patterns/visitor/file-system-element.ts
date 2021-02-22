@@ -11,11 +11,11 @@ export abstract class FileSystemElement implements Element {
     
     // ˄
 
+    abstract accept(visitor: Visitor): void;
+
     abstract get name(): string;
 
     abstract get size(): number;
-
-    abstract accept(visitor: Visitor): void;
 
     toString(): string {
         // ˅

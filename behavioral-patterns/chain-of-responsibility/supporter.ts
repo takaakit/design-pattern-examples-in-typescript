@@ -27,7 +27,7 @@ export abstract class Supporter {
     // Troubles are sent around.
     support(trouble: Trouble): void {
         // ˅
-        if (this.handle(trouble)) {
+        if (this.canHandle(trouble)) {
             this.supported(trouble);
         }
         else if (this.next != null) {
@@ -53,7 +53,7 @@ export abstract class Supporter {
         // ˄
     }
 
-    protected abstract handle(trouble: Trouble): boolean;
+    abstract canHandle(trouble: Trouble): boolean;
 
     // Trouble was supported.
     private supported(trouble: Trouble): void {

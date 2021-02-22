@@ -1,4 +1,6 @@
-// Check whether the same instance is obtained.
+/*
+Check whether the same instance is obtained.
+ */
 'use strict';
 
 import { Singleton } from './singleton';

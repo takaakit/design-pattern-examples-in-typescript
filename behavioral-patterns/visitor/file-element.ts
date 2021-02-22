@@ -23,6 +23,12 @@ export class FileElement extends FileSystemElement {
         // ˄
     }
 
+    accept(visitor: Visitor): void {
+        // ˅
+        visitor.visitFile(this);
+        // ˄
+    }
+
     // File element name
     get name(): string {
         // ˅
@@ -33,12 +39,6 @@ export class FileElement extends FileSystemElement {
     get size(): number {
         // ˅
         return this._size;
-        // ˄
-    }
-
-    accept(visitor: Visitor): void {
-        // ˅
-        visitor.visitFile(this);
         // ˄
     }
 

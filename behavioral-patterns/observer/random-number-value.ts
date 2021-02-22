@@ -1,34 +1,34 @@
 // ˅
 'use strict';
 
-import { ValueNumber } from './value-number';
+import { NumberValue } from './number-value';
 
 // ˄
 
-// Generate a random number.
-export class RandomNumber extends ValueNumber {
+// Generate a random number value.
+export class RandomNumberValue extends NumberValue {
     // ˅
     
     // ˄
 
     constructor() {
         // ˅
-		super();
+        super();
         // ˄
     }
 
     generate(): void {
         // ˅
 		for (let i: number = 0; i < 20; i++) {
-			this._valueNumber = Math.floor(Math.random() * 50);
+			this._value = Math.floor(Math.random() * 50);
 			super.notifyObservers();
 		}
         // ˄
     }
 
-    get valueNumber(): number {
+    get value(): number {
         // ˅
-        return this._valueNumber;
+        return this._value;
         // ˄
     }
 

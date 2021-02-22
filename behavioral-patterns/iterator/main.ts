@@ -1,4 +1,6 @@
-// Add books in the bookshelf and display the names of the books in turn.
+/*
+Add books in a bookshelf and display the names of the book in turn.
+ */
 'use strict';
 
 import { Iterator } from './iterator';

@@ -1,10 +1,10 @@
 /*
-Dice game collecting fruits.
-
+A dice game in which money increases and decreases:
 * A gamer shakes a dice and the number determine the next state.
-* Gamer's money increases or decreases depending on the number. The gamer sometimes gets desserts.
-* The game is over if the gamer's money runs out.
-*/
+* If the number of dice is even, gamer's money doubles, and if it is odd, gamer's money is halved.
+* If the gamer's money is less than half of the highest amount, it returns to the highest amount.
+* The game is repeated.
+ */
 'use strict';
 
 import { Gamer } from './gamer';
@@ -12,10 +12,9 @@ import { Memento } from './memento';
 
 const gamer: Gamer = new Gamer(100);			// The initial money is 100
 var memento: Memento = gamer.createMemento();	// Save the initial state
-var loopCount: number = 0;
 
-let id = setInterval(() => {
-	console.log('==== Turn ' + loopCount);		// Display count
+for (let i = 0; i < 10; i++) {
+	console.log('==== Turn ' + (i + 1));		// Display count
 
 	gamer.play();								// Play a game
 
@@ -29,11 +28,9 @@ let id = setInterval(() => {
 		gamer.setMemento(memento);
 		console.log('Gamer\'s money returns to ' + gamer.money + '.');
 	}
+
 	console.log('');
 
-	loopCount++;
-	if (loopCount >= 10) {
-		clearInterval(id);
-	}
-
-}, 1000);
+	const sleep: any = require('sleep');
+	sleep.sleep(1);
+}

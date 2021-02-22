@@ -1,4 +1,6 @@
-// First, create instances for displaying large size characters, then display large size character string using that instances.
+/*
+Display a string consisting of large characters. Large character objects are not created until they are needed. And the created objects are reused.
+ */
 'use strict';
 
 import { LargeSizeString } from './large-size-string';

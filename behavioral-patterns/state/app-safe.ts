@@ -41,10 +41,10 @@ export class AppSafe implements Context {
         this.callbutton = <HTMLButtonElement>document.getElementById('buttonPhone');
         this.exitbutton = <HTMLButtonElement>document.getElementById('buttonExit');
 
-        this.safebutton.addEventListener('click', (e) => this.state.useSafe(this));         // Safe use button pressed
-        this.soundbutton.addEventListener('click', (e) => this.state.soundBell(this));      // Emergency bell button pressed
-        this.callbutton.addEventListener('click', (e) => this.state.call(this));            // Normal call button pressed
-        this.exitbutton.addEventListener('click', (e) => document.body.innerHTML = "<h1>Dialog terminated.</h1>"); // Exit button pressed
+        this.safebutton.addEventListener('click', () => this.useSafe());        // Safe use button pressed
+        this.soundbutton.addEventListener('click', () => this.soundBell());     // Emergency bell button pressed
+        this.callbutton.addEventListener('click', () => this.call());           // Normal call button pressed
+        this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
 
         setInterval(this.setTime.bind(this), 1000);     // Set the time
         // ˄
@@ -93,6 +93,30 @@ export class AppSafe implements Context {
         // ˅
         this.textMessage.value += 'record ... ' + message + '\n';
         this.textMessage.scrollTop = this.textMessage.scrollHeight;     // Scroll to the bottom
+        // ˄
+    }
+
+    private useSafe(): void {
+        // ˅
+        this.state.useSafe(this);
+        // ˄
+    }
+
+    private soundBell(): void {
+        // ˅
+        this.state.soundBell(this);
+        // ˄
+    }
+
+    private call(): void {
+        // ˅
+        this.state.call(this);
+        // ˄
+    }
+
+    private exit(): void {
+        // ˅
+        document.body.innerHTML = '<h1>Dialog terminated.</h1>';
         // ˄
     }
 

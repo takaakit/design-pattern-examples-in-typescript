@@ -1,4 +1,6 @@
-// Display only one line or display the specified number of lines.
+/*
+Display only one line or display the specified number of lines.
+ */
 'use strict';
 
 import { Display } from './display';

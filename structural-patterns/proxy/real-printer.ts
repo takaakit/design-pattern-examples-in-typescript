@@ -40,7 +40,7 @@ export class RealPrinter implements Printer {
         // ˅
         process.stdout.write(message);
         const sleep: any = require('sleep');
-        for(var i = 0; i < 10; i++){
+        for (let i = 0; i < 10; i++) {
             sleep.msleep(500);   // Wait 500ms
             process.stdout.write('.');
         }

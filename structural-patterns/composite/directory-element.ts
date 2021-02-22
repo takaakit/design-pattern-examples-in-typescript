@@ -30,7 +30,7 @@ export class DirectoryElement extends FileSystemElement {
 
     get size(): number {
         // ˅
-        var size: number = 0;
+        let size: number = 0;
         for (let i = 0; i < this.elements.length; i++) {
             size += this.elements[i].size;
         }

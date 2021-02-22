@@ -53,7 +53,7 @@ export class AppSafe implements Context {
     // Set time
     setTime(): void {
         // ˅
-        var clockTime: string;
+        let clockTime: string;
         if (this.hour < 10) {
             clockTime = '0' + this.hour + ':00';
         }

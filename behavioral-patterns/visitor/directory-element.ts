@@ -40,9 +40,9 @@ export class DirectoryElement extends FileSystemElement {
 
     get size(): number {
         // ˅
-        var value: number = 0;
-        for (let i = 0; i < this.elements.length; i++) {
-            value += this.elements[i].size;
+        let value: number = 0;
+        for (let element of this.elements) {
+            value += element.size;
         }
         return value;
         // ˄

@@ -14,8 +14,8 @@ export class BarChartObserver implements Observer {
 
     update(numberValue: NumberValue): void {
         // ˅
-		var barChart: string = 'Bar chart: ';
-		for (var i: number = 0; i < numberValue.value; i++) {
+		let barChart: string = 'Bar chart: ';
+		for (let i: number = 0; i < numberValue.value; i++) {
 			barChart += '*';
 		}
 		console.log(barChart);

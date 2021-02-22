@@ -16,8 +16,8 @@ const player2 = new Player('James', new MirrorStrategy());
 for (let i = 0; i < 100; i++) {
     const handOfPlayer1 = player1.showHandSignal();
     const handOfPlayer2 = player2.showHandSignal();
-    var resultOfPlayer1: GameResultType;
-    var resultOfPlayer2: GameResultType;
+    let resultOfPlayer1: GameResultType;
+    let resultOfPlayer2: GameResultType;
     if (handOfPlayer1.isStrongerThan(handOfPlayer2)) {
         console.log('Winner: ' + player1.toString());
         resultOfPlayer1 = GameResultType.Win;

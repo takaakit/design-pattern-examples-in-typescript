@@ -20,14 +20,14 @@ const readline = require('readline').createInterface({
 });
 
 readline.question('', (data: any) => {
-    var input: number = Number(data);
+    let input: number = Number(data);
     readline.close();
     if (isNaN(input)) {
         console.log('Unexpected value.');
         process.exit(1);
     }
 
-    var factory: Factory = null;
+    let factory: Factory = null;
     if (input == 1) {
         factory = new ListFactory();
     }

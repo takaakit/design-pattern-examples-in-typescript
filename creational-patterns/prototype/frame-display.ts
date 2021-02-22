@@ -32,7 +32,7 @@ export class FrameDisplay implements Display {
         }
         console.log();
         console.log(this.borderChar + ' ' + message + ' ' + this.borderChar);
-        for (var i = 0; i < length + 4; i++) {
+        for (let i = 0; i < length + 4; i++) {
             process.stdout.write(this.borderChar);
         }
         console.log();

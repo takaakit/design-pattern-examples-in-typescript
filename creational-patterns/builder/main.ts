@@ -15,7 +15,7 @@ const readline = require('readline').createInterface({
 });
 
 readline.question('', (data: any) => {
-    var input: string = data;
+    let input: string = data;
     readline.close();
 
     if (input == 'plain') {

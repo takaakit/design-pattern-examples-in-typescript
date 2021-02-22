@@ -15,7 +15,7 @@ export class LargeSizeCharFactory {
     // Create an instance of the large size character.
     static getLargeSizeChar(charName: string): LargeSizeChar {
         // ˅
-        var lsc: LargeSizeChar = this.poolChars.get(charName);
+        let lsc: LargeSizeChar = this.poolChars.get(charName);
         if (lsc === undefined) {
             lsc = new LargeSizeChar(charName);  // Create an instance
             this.poolChars.set(charName, lsc);

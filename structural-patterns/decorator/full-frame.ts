@@ -47,7 +47,7 @@ export class FullFrame extends Frame {
 
     private createLine(ch: string, size: number): string {
         // ˅
-        var line: string = '';
+        let line: string = '';
         for (let i = 0; i < size; i++) {
             line += ch;
         }

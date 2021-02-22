@@ -11,7 +11,7 @@ import { Gamer } from './gamer';
 import { Memento } from './memento';
 
 const gamer: Gamer = new Gamer(100);			// The initial money is 100
-var memento: Memento = gamer.createMemento();	// Save the initial state
+let memento: Memento = gamer.createMemento();	// Save the initial state
 
 for (let i = 0; i < 10; i++) {
 	console.log('==== Turn ' + (i + 1));		// Display count

@@ -15,6 +15,8 @@ export class AppSafe implements Context {
 
     private hour: number;
 
+    private readonly timerId: number;
+
     // Current state
     private state: State;
 
@@ -46,7 +48,7 @@ export class AppSafe implements Context {
         this.callbutton.addEventListener('click', () => this.call());           // Normal call button pressed
         this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
 
-        setInterval(this.setTime.bind(this), 1000);     // Set the time
+        this.timerId = setInterval(this.setTime.bind(this), 1000);     // Set interval timer
         // ˄
     }
 
@@ -116,6 +118,7 @@ export class AppSafe implements Context {
 
     private exit(): void {
         // ˅
+        clearInterval(this.timerId);    // Clear interval timer
         document.body.innerHTML = '<h1>Dialog terminated.</h1>';
         // ˄
     }

@@ -33,7 +33,7 @@ export class CharDisplay extends AbstractDisplay {
 
     close(): void {
         // ˅
-        console.log('>>');                      // Display '>>' in the start characters.
+        console.log('>>');                      // Display '>>' in the end characters.
         // ˄
     }
 

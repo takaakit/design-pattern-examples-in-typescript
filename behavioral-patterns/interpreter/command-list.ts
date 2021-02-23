@@ -31,10 +31,10 @@ export class CommandList implements Node {
 				break;
 			}
 			else {
-				const aCommand: Command = new Command();
-				aCommand.parse(context);
+				const aNode: Node = new Command();
+				aNode.parse(context);
 
-				this.nodes.push(aCommand);  // Hold the parsed node
+				this.nodes.push(aNode);  // Hold the parsed node
 			}
 		}
         // ˄

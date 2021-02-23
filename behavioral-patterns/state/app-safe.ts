@@ -43,9 +43,9 @@ export class AppSafe implements Context {
         this.callbutton = <HTMLButtonElement>document.getElementById('buttonPhone');
         this.exitbutton = <HTMLButtonElement>document.getElementById('buttonExit');
 
-        this.safebutton.addEventListener('click', () => this.useSafe());        // Safe use button pressed
-        this.soundbutton.addEventListener('click', () => this.soundBell());     // Emergency bell button pressed
-        this.callbutton.addEventListener('click', () => this.call());           // Normal call button pressed
+        this.safebutton.addEventListener('click', () => this.useSafe());        // Use button pressed
+        this.soundbutton.addEventListener('click', () => this.soundBell());     // Alarm button pressed
+        this.callbutton.addEventListener('click', () => this.call());           // Phone button pressed
         this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
 
         this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer

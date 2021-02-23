@@ -19,14 +19,12 @@ export class Gamer {
         // ˄
     }
 
-    // Get current status
     createMemento(): Memento {
         // ˅
 		return new Memento(this._money);
         // ˄
     }
 
-    // Undo status
     setMemento(memento: Memento): void {
         // ˅
         this._money = memento.money;

@@ -8,10 +8,5 @@ And change the editable properties of the elements depending on the state of the
  */
 'use strict';
 
-//////////////////////////////////////////////////
-// USAGE:                                       //
-//   1. Run build task.                         //
-//   2. Open the "mediator-example.html" file.  //
-//////////////////////////////////////////////////
 import { AppLogin } from './app-login';
 new AppLogin();

@@ -48,7 +48,7 @@ export class AppSafe implements Context {
         this.callbutton.addEventListener('click', () => this.call());           // Normal call button pressed
         this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
 
-        this.timerId = setInterval(this.setTime.bind(this), 1000);     // Set interval timer
+        this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer
         // ˄
     }
 

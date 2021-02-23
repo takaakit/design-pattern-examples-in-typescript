@@ -19,12 +19,6 @@ export class RealPrinter implements Printer {
         // ˄
     }
 
-    set printerName(name: string) {
-        // ˅
-        this._printerName = name;
-        // ˄
-    }
-
     // Display a content with the name
     output(content: string): void {
         // ˅
@@ -32,6 +26,12 @@ export class RealPrinter implements Printer {
         console.log(content);
         console.log('Printed by ' + this._printerName);
         console.log('==========');
+        // ˄
+    }
+
+    set printerName(name: string) {
+        // ˅
+        this._printerName = name;
         // ˄
     }
 

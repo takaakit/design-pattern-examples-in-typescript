@@ -23,6 +23,15 @@ export class PrinterProxy implements Printer {
         // ˄
     }
 
+    output(content: string): void {
+        // ˅
+        if (this.real == null) {
+            this.real = new RealPrinter(this.currentName);
+        }
+        this.real.output(content);
+        // ˄
+    }
+
     get printerName(): string {
         // ˅
         return this.currentName;
@@ -35,15 +44,6 @@ export class PrinterProxy implements Printer {
             this.real.printerName = printerName;
         }
         this.currentName = printerName;
-        // ˄
-    }
-
-    output(content: string): void {
-        // ˅
-        if (this.real == null) {
-            this.real = new RealPrinter(this.currentName);
-        }
-        this.real.output(content);
         // ˄
     }
 

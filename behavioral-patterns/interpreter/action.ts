@@ -12,7 +12,13 @@ export class Action implements Node {
     
     // ˄
 
-    protected name: string;
+    private name: string;
+
+    constructor() {
+        // ˅
+        
+        // ˄
+    }
 
     parse(context: Context): void {
         // ˅

@@ -3,7 +3,7 @@
 
 // ˄
 
-// Hold the data which will be interpreted.
+// Hold data which will be interpreted.
 export class Context {
     // ˅
     

@@ -5,7 +5,7 @@ The subject is a factory to make credit cards. The abstract class("Factory") def
 
 import { Factory } from './framework/factory';
 import { Product } from './framework/product';
-import { CreditCardFactory } from './id-card/credit-card-factory';
+import { CreditCardFactory } from './credit-card/credit-card-factory';
 
 const factory: Factory = new CreditCardFactory();
 

@@ -3,7 +3,7 @@ Create documents in HTML format and text format. It is possible to create differ
  */
 'use strict';
 
-import { HTMLBuilder } from './hTML-builder';
+import { HTMLBuilder } from './html-builder';
 import { Director } from './director';
 import { PlainTextBuilder } from './plain-text-builder';
 

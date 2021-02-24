@@ -17,7 +17,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch behavioral-patterns/command",
-            "file": "${workspaceFolder}/behavioral-patterns/command/index.html",
+            "url": "http://localhost:5500/behavioral-patterns/command/index.html",
+            "webRoot": "${workspaceFolder}",
             "preLaunchTask": "tsc: build - behavioral-patterns/command/tsconfig.json",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -52,7 +53,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch behavioral-patterns/mediator",
-            "file": "${workspaceFolder}/behavioral-patterns/mediator/index.html",
+            "url": "http://localhost:5500/behavioral-patterns/mediator/index.html",
+            "webRoot": "${workspaceFolder}",
             "preLaunchTask": "tsc: build - behavioral-patterns/mediator/tsconfig.json",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -87,7 +89,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch behavioral-patterns/state",
-            "file": "${workspaceFolder}/behavioral-patterns/state/index.html",
+            "url": "http://localhost:5500/behavioral-patterns/state/index.html",
+            "webRoot": "${workspaceFolder}",
             "preLaunchTask": "tsc: build - behavioral-patterns/state/tsconfig.json",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",

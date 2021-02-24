@@ -3,6 +3,7 @@
 
 import { NumberValue } from './number-value';
 import { Observer } from './observer';
+import * as sleep from 'sleep';
 
 // ˄
 
@@ -16,7 +17,6 @@ export class DigitObserver implements Observer {
         // ˅
 		console.log('Digit    : ' + numberValue.value);
 
-        const sleep: any = require('sleep');
         sleep.msleep(100);   // Wait 100ms
         // ˄
     }

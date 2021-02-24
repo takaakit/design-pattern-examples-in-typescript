@@ -3,6 +3,7 @@
 
 import { Observer } from './observer';
 import { NumberValue } from './number-value';
+import * as sleep from 'sleep';
 
 // ˄
 
@@ -20,7 +21,6 @@ export class BarChartObserver implements Observer {
 		}
 		console.log(barChart);
 
-        const sleep: any = require('sleep');
         sleep.msleep(100);   // Wait 100ms
         // ˄
     }

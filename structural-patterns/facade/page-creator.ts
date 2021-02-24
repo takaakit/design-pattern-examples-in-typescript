@@ -2,6 +2,7 @@
 'use strict';
 
 import * as fs from 'fs';
+import * as path from 'path';
 import { DataLibrary } from './data-library';
 import { HtmlWriter } from './html-writer';
 
@@ -24,7 +25,6 @@ export class PageCreator {
         writer.mailto(mailAddress, userName);
         writer.close();
         console.log(htmlFileName + ' is created for ' + mailAddress + ' (' + userName + ')');
-        const path = require('path');
         console.log('Output File: ' + path.join(process.cwd(), htmlFileName));
         // ˄
     }

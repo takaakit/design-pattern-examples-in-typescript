@@ -22,10 +22,10 @@ export class Action implements Node {
 
     parse(context: Context): void {
         // ˅
-		const currentToken: string = context.getToken();
-		if (currentToken !== 'forward' && currentToken !== 'right' && currentToken !== 'left') {
-			throw new Error(currentToken + ' is unknown');
-		}
+        const currentToken: string = context.getToken();
+        if (currentToken !== 'forward' && currentToken !== 'right' && currentToken !== 'left') {
+            throw new Error(currentToken + ' is unknown');
+        }
 
         this.name = currentToken;
 
@@ -35,7 +35,7 @@ export class Action implements Node {
 
     toString(): string {
         // ˅
-		return this.name;
+        return this.name;
         // ˄
     }
 

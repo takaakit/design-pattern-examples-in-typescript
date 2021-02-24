@@ -24,14 +24,14 @@ export class Command implements Node {
     parse(context: Context): void {
         // ˅
         let aNode: Node;
-		if (context.getToken() === 'repeat') {
-			aNode = new Repeat();
-			aNode.parse(context);
-		}
-		else {
-			aNode = new Action();
-			aNode.parse(context);
-		}
+        if (context.getToken() === 'repeat') {
+            aNode = new Repeat();
+            aNode.parse(context);
+        }
+        else {
+            aNode = new Action();
+            aNode.parse(context);
+        }
 
         this.node = aNode;  // Hold the parsed node
         // ˄
@@ -39,7 +39,7 @@ export class Command implements Node {
 
     toString(): string {
         // ˅
-		return this.node.toString();
+        return this.node.toString();
         // ˄
     }
 

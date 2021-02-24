@@ -9,28 +9,28 @@ A dice game in which money increases and decreases:
 
 import { Gamer } from './gamer';
 import { Memento } from './memento';
+import * as sleep from 'sleep';
 
-const gamer: Gamer = new Gamer(100);			// The initial money is 100
-let memento: Memento = gamer.createMemento();	// Save the initial state
+const gamer: Gamer = new Gamer(100);            // The initial money is 100
+let memento: Memento = gamer.createMemento();   // Save the initial state
 
 for (let i = 0; i < 10; i++) {
-	console.log('==== Turn ' + (i + 1));		// Display count
+    console.log('==== Turn ' + (i + 1));        // Display count
 
-	gamer.play();								// Play a game
+    gamer.play();                               // Play a game
 
-	// Determine the behavior of the Memento
-	if (gamer.money > memento.money) {
-		console.log('(Gamers\' money is the highest ever, so record the current state.)');
-		memento = gamer.createMemento();
-	}
-	else if (gamer.money < memento.money / 2) {
-		console.log('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)');
-		gamer.setMemento(memento);
-		console.log('Gamer\'s money returns to ' + gamer.money + '.');
-	}
+    // Determine the behavior of the Memento
+    if (gamer.money > memento.money) {
+        console.log('(Gamers\' money is the highest ever, so record the current state.)');
+        memento = gamer.createMemento();
+    }
+    else if (gamer.money < memento.money / 2) {
+        console.log('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)');
+        gamer.setMemento(memento);
+        console.log('Gamer\'s money returns to ' + gamer.money + '.');
+    }
 
-	console.log('');
+    console.log('');
 
-	const sleep: any = require('sleep');
-	sleep.sleep(1);
+    sleep.sleep(1);
 }

@@ -67,9 +67,9 @@ Installation
 **Development Environment for TypeScript**
 * Install [Visual Studio Code](https://code.visualstudio.com/download).
 * Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
-* After installing Node.js, install TypeScript, Node type definitions, and Sleep module with the following commands.  
+* After installing Node.js, install TypeScript, Sleep module, and type definitions with the following commands.  
 `cd <this directory (design-pattern-examples-in-typescript)>`  
-`npm install typescript @types/node sleep`  
+`npm install typescript sleep @types/node @types/sleep`  
 
 Usage
 -----

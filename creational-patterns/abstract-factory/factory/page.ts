@@ -2,6 +2,7 @@
 'use strict';
 
 import * as fs from 'fs';
+import * as path from 'path';
 import { Item } from './item';
 
 // ˄
@@ -42,7 +43,6 @@ export abstract class Page {
             console.error(e);
         }
         console.log(fileName + ' has been created.');
-        const path = require('path');
         console.log('Output File: ' + path.join(process.cwd(), fileName));
         // ˄
     }

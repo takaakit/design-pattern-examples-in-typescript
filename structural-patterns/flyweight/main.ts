@@ -4,10 +4,11 @@ Display a string consisting of large characters. Large character objects are not
 'use strict';
 
 import { LargeSizeString } from './large-size-string';
+import * as rl from 'readline';
 
 console.log('Please enter digits (ex. 1212123):');
 
-const readline = require('readline').createInterface({
+const readline = rl.createInterface({
     input: process.stdin,
     output: process.stdout
 });

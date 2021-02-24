@@ -19,20 +19,20 @@ export class Repeat implements Node {
 
     constructor() {
         // ˅
-		this.number = 0;
-		this.commandList = null;
+        this.number = 0;
+        this.commandList = null;
         // ˄
     }
 
     parse(context: Context): void {
         // ˅
-		context.slideToken('repeat');
+        context.slideToken('repeat');
         
-		this.number = context.getNumber();
-		context.slideToken(String(this.number));
+        this.number = context.getNumber();
+        context.slideToken(String(this.number));
 
         const aCommandList = new CommandList();
-		aCommandList.parse(context);
+        aCommandList.parse(context);
 
         this.commandList = aCommandList;    // Hold the parsed command list
         // ˄
@@ -40,7 +40,7 @@ export class Repeat implements Node {
 
     toString(): string {
         // ˅
-		return 'repeat ' + this.number + ' ' + this.commandList;
+        return 'repeat ' + this.number + ' ' + this.commandList;
         // ˄
     }
 

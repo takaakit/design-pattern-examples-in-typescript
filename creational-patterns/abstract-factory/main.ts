@@ -9,12 +9,13 @@ import { Link } from './factory/link';
 import { Page } from './factory/page';
 import { ListFactory } from './list-factory/list-factory';
 import { TableFactory } from './table-factory/table-factory';
+import * as rl from 'readline';
 
 console.log('Please enter a number (1 or 2):');
 console.log('  1: Create objects by using ListFactory');
 console.log('  2: Create objects by using TableFactory');
 
-const readline = require('readline').createInterface({
+const readline = rl.createInterface({
     input: process.stdin,
     output: process.stdout
 });

@@ -18,22 +18,22 @@ export class BookShelfIterator implements Iterator {
 
     constructor(bookShelf: BookShelf) {
         // ˅
-		this.index = 0;
-		this.bookShelf = bookShelf;
+        this.index = 0;
+        this.bookShelf = bookShelf;
         // ˄
     }
 
     hasNext(): boolean {
         // ˅
-		return this.index < this.bookShelf.numberOfBooks;
+        return this.index < this.bookShelf.numberOfBooks;
         // ˄
     }
 
     next(): any {
         // ˅
-		const book: Book = this.bookShelf.getAt(this.index);
-		this.index++;
-		return book;
+        const book: Book = this.bookShelf.getAt(this.index);
+        this.index++;
+        return book;
         // ˄
     }
 

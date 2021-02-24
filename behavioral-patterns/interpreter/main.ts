@@ -34,9 +34,8 @@ After parsing  : [program [repeat 4 [forward, right]]]
 import { Node } from './node';
 import { Program } from './program';
 import { Context } from './context';
-
-import fs = require('fs');
-import readline = require('readline');
+import * as fs from 'fs';
+import * as readline from 'readline';
 
 const stream = fs.createReadStream(__dirname + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });

@@ -1,4 +1,4 @@
-[<img src="./screenshots/DiagramMap.svg">](https://raw.githubusercontent.com/takaakit/design-pattern-examples-in-typescript/master/screenshots/DiagramMap.svg)
+![](screenshots/DiagramMap.svg "All diagrams")
 
 Design Pattern Examples in TypeScript
 ===
@@ -62,23 +62,35 @@ Installation
 
 **M PLUS plug-in**
 * Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  **Use ver.2.5.0 or higher.**
+  Use **ver.2.5.0** or higher.
 
 **Development Environment for TypeScript**
-* Install [Visual Studio Code](https://code.visualstudio.com/download).
-* Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
-* After installing Node.js, install TypeScript, Sleep module, and type definitions with the following commands.  
+1. Install [Visual Studio Code](https://code.visualstudio.com/download).
+2. Install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions for VS Code.
+3. Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
+4. Install TypeScript, Sleep module, and type definitions with the following commands using npm.  
 `cd <this directory (design-pattern-examples-in-typescript)>`  
 `npm install typescript sleep @types/node @types/sleep`  
 
 Usage
 -----
-* Select model elements on the model browser of Astah, and press the "Generate code" button to generate.  
-* The generated code has "User Code Area". The "User Code Area" is the area enclosed by "˅" and "˄". Handwritten code written in the "User Code Area" remains after a re-generation.
-* You can run the program from "main.ts" or HTML file for each Design Pattern.
-* For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin/tips).
+**Code Generation**
+  1. Select model elements on the model browser of Astah.
+  2. Click the **Generate Code** button.  
+  The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation.
+  ![](screenshots/GenerateCode.gif "Generate Code")
 
-![](screenshots/Usage.gif "Usage")
+**Build and Run**
+  1. Open the workspace file (design-pattern-examples-in-typescript.code-workspace) in VS Code.
+  2. Select the **Run** icon in the Activity Bar on the side of VS Code.
+  3. Select the configuration named Launch Program using the Configuration drop-down in the Run view.
+  4. Click the **Start Debugging** button.  
+     ![](screenshots/CompileAndRun.gif "Compile and Run")  
+
+     *Note*: Before running patterns **Command**, **Mediator**, and **State**, you need to click to Go Live from the status bar to turn a server on. After running those patterns, click again to turn the server off.  
+     ![](screenshots/GoLiveButton.png "Go Live button")
+
+  For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin/tips).
 
 References
 ----------

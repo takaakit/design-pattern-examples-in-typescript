@@ -67,8 +67,9 @@ Installation
 **Development Environment for TypeScript**
 1. Install [Visual Studio Code](https://code.visualstudio.com/download).
 2. Install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions for VS Code.
-3. Install [Node.js](https://nodejs.org/en/) ver.12.3.1 or higher.
-4. Install TypeScript, Sleep module, and type definitions with the following commands using npm.  
+3. Install [Chrome](https://www.google.com/intl/en/chrome/) browser.
+4. Install [Node.js](https://nodejs.org/en/) **ver.12.3.1** or higher.
+5. Install TypeScript, Sleep module, and type definitions with the following commands using npm.  
 `cd <this directory (design-pattern-examples-in-typescript)>`  
 `npm install typescript sleep @types/node @types/sleep`  
 

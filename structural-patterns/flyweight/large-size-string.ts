@@ -17,7 +17,7 @@ export class LargeSizeString {
         // ˅
         this.largeSizeChars = new Array<LargeSizeChar>();
         for (let i = 0; i < stringValue.length; i++) {
-            this.largeSizeChars.push(LargeSizeCharFactory.getLargeSizeChar(stringValue[i]));
+            this.largeSizeChars.push(LargeSizeCharFactory.getInstance().getLargeSizeChar(stringValue[i]));
         }
         // ˄
     }

@@ -5,4 +5,4 @@ Create a simple homepage through a Facade("PageCreator"). The Facade gets info f
 
 import { PageCreator } from './page-creator';
 
-PageCreator.createSimpleHomepage('emily@example.com', 'Homepage.html');
+PageCreator.getInstance().createSimpleHomepage('emily@example.com', 'Homepage.html');

@@ -13,9 +13,23 @@ export class PageCreator {
     
     // ˄
 
-    static createSimpleHomepage(mailAddress: string, htmlFileName: string): void {
+    private static readonly instance: PageCreator = new PageCreator();
+
+    static getInstance(): PageCreator {
         // ˅
-        const addressBook: Map<string, string> = DataLibrary.getData(__dirname + '/addressbook.txt');
+        return this.instance;
+        // ˄
+    }
+
+    private constructor() {
+        // ˅
+        
+        // ˄
+    }
+
+    createSimpleHomepage(mailAddress: string, htmlFileName: string): void {
+        // ˅
+        const addressBook: Map<string, string> = DataLibrary.getInstance().getData(__dirname + '/addressbook.txt');
         const userName: string = addressBook.get(mailAddress);
         
         const writer: HtmlWriter = new HtmlWriter(fs.createWriteStream(htmlFileName, 'utf8'));

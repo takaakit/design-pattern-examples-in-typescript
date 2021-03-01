@@ -10,8 +10,22 @@ export class DataLibrary {
     
     // ˄
 
+    private static readonly instance: DataLibrary = new DataLibrary();
+
+    static getInstance(): DataLibrary {
+        // ˅
+        return this.instance;
+        // ˄
+    }
+
+    private constructor() {
+        // ˅
+        
+        // ˄
+    }
+
     // Read a data library file.
-    static getData(dataLibraryFileName: string): Map<string, string> {
+    getData(dataLibraryFileName: string): Map<string, string> {
         // ˅
         const data: Map<string, string> = new Map<string, string>();
 

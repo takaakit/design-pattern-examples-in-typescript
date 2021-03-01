@@ -16,7 +16,7 @@ export abstract class Factory {
         // ˄
     }
 
-    abstract createProduct(owner: string): Product;
+    protected abstract createProduct(owner: string): Product;
 
     // ˅
     

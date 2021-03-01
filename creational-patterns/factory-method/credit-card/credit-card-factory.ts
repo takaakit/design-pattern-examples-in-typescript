@@ -18,7 +18,7 @@ export class CreditCardFactory extends Factory {
         // ˄
     }
 
-    createProduct(owner: string): Product {
+    protected createProduct(owner: string): Product {
         // ˅
         return new CreditCard(owner);
         // ˄

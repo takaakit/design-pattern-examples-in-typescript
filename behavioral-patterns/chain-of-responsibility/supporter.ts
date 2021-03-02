@@ -53,7 +53,7 @@ export abstract class Supporter {
         // ˄
     }
 
-    abstract canHandle(trouble: Trouble): boolean;
+    protected abstract canHandle(trouble: Trouble): boolean;
 
     // Trouble was supported.
     private supported(trouble: Trouble): void {

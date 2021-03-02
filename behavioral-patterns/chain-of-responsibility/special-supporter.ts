@@ -21,7 +21,7 @@ export class SpecialSupporter extends Supporter {
     }
 
     // Troubles with the specific ID are handled.
-    canHandle(trouble: Trouble): boolean {
+    protected canHandle(trouble: Trouble): boolean {
         // ˅
         return trouble.id === this.targetId;
         // ˄

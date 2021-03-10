@@ -1,5 +1,6 @@
 /*
-Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+Create documents in HTML format and text format. It is possible to create different documents
+in the same construction process.
  */
 'use strict';
 

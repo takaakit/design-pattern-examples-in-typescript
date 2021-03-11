@@ -10,9 +10,9 @@ export class ColleagueRadioButton extends Colleague {
     
     // ˄
 
-    private readonly radioButton: HTMLButtonElement;
+    private readonly radioButton: HTMLInputElement;
 
-    constructor(radioButton: HTMLButtonElement) {
+    constructor(radioButton: HTMLInputElement) {
         // ˅
         super();
         this.radioButton = radioButton;
@@ -27,9 +27,15 @@ export class ColleagueRadioButton extends Colleague {
         // ˄
     }
 
+    isSelected(): boolean {
+        // ˅
+        return this.radioButton.checked;
+        // ˄
+    }
+
     private clickRadioButton(event: MouseEvent): void {
         // ˅
-        this._mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged();
         // ˄
     }
 

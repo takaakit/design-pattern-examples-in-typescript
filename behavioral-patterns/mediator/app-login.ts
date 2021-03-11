@@ -45,8 +45,8 @@ export class AppLogin implements Mediator {
 
     createColleagues(): void {
         // ˅
-        this.radioGuest = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioGuest'));
-        this.radioLogin = new ColleagueRadioButton(<HTMLButtonElement>document.getElementById('radioLogin'));
+        this.radioGuest = new ColleagueRadioButton(<HTMLInputElement>document.getElementById('radioGuest'));
+        this.radioLogin = new ColleagueRadioButton(<HTMLInputElement>document.getElementById('radioLogin'));
         this.textUsername = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textUsername'));
         this.textPassword = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textPassword'));
         this.buttonOk = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonOk'));
@@ -55,19 +55,18 @@ export class AppLogin implements Mediator {
     }
 
     // Change enable/disable of the Colleagues when notified from the Mediators.
-    colleagueChanged(event: Event): void {
+    colleagueChanged(): void {
         // ˅
-        if (event.currentTarget === document.getElementById('buttonOk')
-                || event.currentTarget === document.getElementById('buttonCancel')) {
+        if (this.buttonOk.isPressed() || this.buttonCancel.isPressed()) {
             document.body.innerHTML = '<h1>Dialog terminated.</h1>'     // Display a termination message
         }
         else {
-            if (event.currentTarget === document.getElementById('radioGuest')) { // Guest mode
+            if (this.radioGuest.isSelected()) {         // Guest mode
                 this.textUsername.setActivation(false);
                 this.textPassword.setActivation(false);
                 this.buttonOk.setActivation(true);
             }
-            else {                                                              // Login mode
+            else {                                      // Login mode
                 this.textUsername.setActivation(true);
                 this.textPassword.setActivation(true);
 

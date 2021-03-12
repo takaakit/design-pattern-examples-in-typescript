@@ -12,7 +12,15 @@ export class NightState implements State {
     
     // ˄
 
-    constructor() {
+    private static instance: NightState = new NightState();
+
+    static getInstance(): NightState {
+        // ˅
+        return this.instance;
+        // ˄
+    }
+
+    private constructor() {
         // ˅
         
         // ˄
@@ -22,7 +30,7 @@ export class NightState implements State {
     setTime(context: Context, hour: number): void {
         // ˅
         if (9 <= hour && hour < 17) {
-            context.changeState(new DaytimeState());
+            context.changeState(DaytimeState.getInstance());
         }
         // ˄
     }

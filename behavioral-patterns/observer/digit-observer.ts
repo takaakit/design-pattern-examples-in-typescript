@@ -6,7 +6,7 @@ import { Observer } from './observer';
 
 // ˄
 
-// Display number values with digits.
+// Display values as a number.
 export class DigitObserver implements Observer {
     // ˅
     

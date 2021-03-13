@@ -6,7 +6,7 @@ import { NumberValue } from './number-value';
 
 // ˄
 
-// Display number values with a bar chart.
+// Display values as a bar chart.
 export class BarChartObserver implements Observer {
     // ˅
     

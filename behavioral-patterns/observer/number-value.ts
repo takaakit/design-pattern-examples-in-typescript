@@ -24,15 +24,13 @@ export abstract class NumberValue {
 
     abstract generate(): void;
 
-    abstract get value(): number;
-
     addObserver(observer: Observer): void {
         // ˅
         this.observers.push(observer);
         // ˄
     }
 
-    deleteObserver(observer: Observer): void {
+    removeObserver(observer: Observer): void {
         // ˅
 		for (let i: number = 0; i < this.observers.length; i++) {
 			if(this.observers[i] === observer){
@@ -47,6 +45,12 @@ export abstract class NumberValue {
 		for (let observer of this.observers) {
 			observer.update(this);
 		}
+        // ˄
+    }
+
+    get value(): number {
+        // ˅
+        return this._value;
         // ˄
     }
 

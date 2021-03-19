@@ -15,7 +15,7 @@ export class RealPrinter implements Printer {
     constructor(name: string) {
         // ˅
         this._printerName = name;
-        this.heavyTask('Creating an instance(' + name + ') of the Printer');
+        this.heavyTask('Creating an instance (' + name + ') of the Printer');
         // ˄
     }
 

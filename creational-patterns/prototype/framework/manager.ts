@@ -27,7 +27,7 @@ export class Manager {
     getDisplay(displayName: string): Display {
         // ˅
         const d: Display = this.display.get(displayName);
-        return d.createClone();
+        return d.clone();
         // ˄
     }
 

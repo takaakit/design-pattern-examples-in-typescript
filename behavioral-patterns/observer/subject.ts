@@ -5,7 +5,7 @@ import { Observer } from './observer';
 
 // ˄
 
-export abstract class Subject {
+export class Subject {
     // ˅
     
     // ˄

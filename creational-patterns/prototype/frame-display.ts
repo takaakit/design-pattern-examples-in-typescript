@@ -18,7 +18,7 @@ export class FrameDisplay implements Display {
         // ˄
     }
 
-    createClone(): Display {
+    clone(): Display {
         // ˅
         return new FrameDisplay(this.borderChar);
         // ˄

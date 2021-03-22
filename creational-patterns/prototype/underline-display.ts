@@ -18,7 +18,7 @@ export class UnderlineDisplay implements Display {
         // ˄
     }
 
-    createClone(): Display {
+    clone(): Display {
         // ˅
         return new UnderlineDisplay(this.underlineChar);
         // ˄

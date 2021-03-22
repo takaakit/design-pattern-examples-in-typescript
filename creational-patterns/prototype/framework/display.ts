@@ -5,7 +5,7 @@
 
 export interface Display {
 
-    createClone(): Display;
+    clone(): Display;
 
     show(message: string): void;
 

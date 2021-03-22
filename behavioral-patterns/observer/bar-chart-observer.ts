@@ -1,8 +1,9 @@
 // ˅
 'use strict';
 
+import { Subject } from './subject';
+import { NumberSubject } from './number-subject';
 import { Observer } from './observer';
-import { NumberValue } from './number-value';
 
 // ˄
 
@@ -12,13 +13,24 @@ export class BarChartObserver implements Observer {
     
     // ˄
 
-    update(numberValue: NumberValue): void {
+    private numberSubject: NumberSubject;
+
+    constructor(numberSubject: NumberSubject) {
         // ˅
-		let barChart: string = 'Bar chart: ';
-		for (let i: number = 0; i < numberValue.value; i++) {
-			barChart += '*';
-		}
-		console.log(barChart);
+        this.numberSubject = numberSubject;
+        
+        // ˄
+    }
+
+    update(changedSubject: Subject): void {
+        // ˅
+        if (changedSubject === this.numberSubject) {
+            let barChart: string = 'Bar chart: ';
+            for (let i: number = 0; i < this.numberSubject.value; i++) {
+                barChart += '*';
+            }
+            console.log(barChart);
+        }
         // ˄
     }
 

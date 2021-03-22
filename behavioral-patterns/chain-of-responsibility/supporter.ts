@@ -47,18 +47,12 @@ export abstract class Supporter {
         // ˄
     }
 
-    toString(): string {
-        // ˅
-        return "[" + this.name + "]";
-        // ˄
-    }
-
     protected abstract canHandle(trouble: Trouble): boolean;
 
     // Trouble was supported.
     private supported(trouble: Trouble): void {
         // ˅
-        console.log(trouble.toString() + " was handled by " + this.toString() + ".");
+        console.log(trouble.toString() + " was handled by " + this.name + ".");
         // ˄
     }
 

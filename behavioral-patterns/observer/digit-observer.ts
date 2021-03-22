@@ -1,7 +1,8 @@
 // ˅
 'use strict';
 
-import { NumberValue } from './number-value';
+import { Subject } from './subject';
+import { NumberSubject } from './number-subject';
 import { Observer } from './observer';
 
 // ˄
@@ -12,9 +13,20 @@ export class DigitObserver implements Observer {
     
     // ˄
 
-    update(numberValue: NumberValue): void {
+    private numberSubject: NumberSubject;
+
+    constructor(numberSubject: NumberSubject) {
         // ˅
-		console.log('Digit    : ' + numberValue.value);
+        this.numberSubject = numberSubject;
+        
+        // ˄
+    }
+
+    update(changedSubject: Subject): void {
+        // ˅
+        if (changedSubject === this.numberSubject) {
+    		console.log('Digit    : ' + this.numberSubject.value);
+        }
         // ˄
     }
 

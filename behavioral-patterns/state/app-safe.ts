@@ -24,13 +24,11 @@ export class AppSafe implements Context {
 
     private readonly textMessage: HTMLTextAreaElement;
 
-    private readonly safebutton: HTMLButtonElement;
+    private readonly useButton: HTMLButtonElement;
 
-    private readonly soundbutton: HTMLButtonElement;
+    private readonly alarmButton: HTMLButtonElement;
 
-    private readonly callbutton: HTMLButtonElement;
-
-    private readonly exitbutton: HTMLButtonElement;
+    private readonly phoneButton: HTMLButtonElement;
 
     constructor() {
         // ˅
@@ -38,15 +36,13 @@ export class AppSafe implements Context {
         this.hour = 0;
         this.textClock = <HTMLTextAreaElement>document.getElementById('textTime');
         this.textMessage = <HTMLTextAreaElement>document.getElementById('textMessage');
-        this.safebutton = <HTMLButtonElement>document.getElementById('buttonUse');
-        this.soundbutton = <HTMLButtonElement>document.getElementById('buttonAlarm');
-        this.callbutton = <HTMLButtonElement>document.getElementById('buttonPhone');
-        this.exitbutton = <HTMLButtonElement>document.getElementById('buttonExit');
+        this.useButton = <HTMLButtonElement>document.getElementById('buttonUse');
+        this.alarmButton = <HTMLButtonElement>document.getElementById('buttonAlarm');
+        this.phoneButton = <HTMLButtonElement>document.getElementById('buttonPhone');
 
-        this.safebutton.addEventListener('click', () => this.useSafe());        // Use button pressed
-        this.soundbutton.addEventListener('click', () => this.soundBell());     // Alarm button pressed
-        this.callbutton.addEventListener('click', () => this.call());           // Phone button pressed
-        this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
+        this.useButton.addEventListener('click', () => this.pressedUseButton());
+        this.alarmButton.addEventListener('click', () => this.pressedAlarmButton());
+        this.phoneButton.addEventListener('click', () => this.pressedPhoneButton());
 
         this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer
         // ˄
@@ -98,28 +94,21 @@ export class AppSafe implements Context {
         // ˄
     }
 
-    private useSafe(): void {
+    private pressedUseButton(): void {
         // ˅
-        this.state.useSafe(this);
+        this.state.use(this);
         // ˄
     }
 
-    private soundBell(): void {
+    private pressedAlarmButton(): void {
         // ˅
-        this.state.soundBell(this);
+        this.state.alarm(this);
         // ˄
     }
 
-    private call(): void {
+    private pressedPhoneButton(): void {
         // ˅
-        this.state.call(this);
-        // ˄
-    }
-
-    private exit(): void {
-        // ˅
-        clearInterval(this.timerId);    // Clear interval timer
-        document.body.innerHTML = '<h1>Dialog terminated.</h1>';
+        this.state.phone(this);
         // ˄
     }
 

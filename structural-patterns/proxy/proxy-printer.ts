@@ -6,7 +6,7 @@ import { RealPrinter } from './real-printer';
 
 // ˄
 
-export class PrinterProxy implements Printer {
+export class ProxyPrinter implements Printer {
     // ˅
     
     // ˄
@@ -23,27 +23,27 @@ export class PrinterProxy implements Printer {
         // ˄
     }
 
+    getName(): string {
+        // ˅
+        return this.currentName;
+        // ˄
+    }
+
+    changeName(name: string): void {
+        // ˅
+        if (this.real != null) {
+            this.real.changeName(name);
+        }
+        this.currentName = name;
+        // ˄
+    }
+
     output(content: string): void {
         // ˅
         if (this.real == null) {
             this.real = new RealPrinter(this.currentName);
         }
         this.real.output(content);
-        // ˄
-    }
-
-    get printerName(): string {
-        // ˅
-        return this.currentName;
-        // ˄
-    }
-
-    set printerName(printerName: string) {
-        // ˅
-        if (this.real != null) {
-            this.real.printerName = printerName;
-        }
-        this.currentName = printerName;
         // ˄
     }
 

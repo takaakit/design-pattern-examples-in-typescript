@@ -10,6 +10,8 @@ export interface Node {
 
     parse(context: Context): void;
 
+    toString(): string;
+
     // ˅
     
     // ˄

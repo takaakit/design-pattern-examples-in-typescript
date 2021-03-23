@@ -35,13 +35,6 @@ export class HtmlWriter {
         // ˄
     }
 
-    // Write a link
-    anchor(url: string, text: string): void {
-        // ˅
-        this.paragraph('<a href="' + url + '">' + text + '</a>');
-        // ˄
-    }
-
     // Write a mail address
     mailto(mailAddress: string, userName: string): void {
         // ˅
@@ -54,6 +47,13 @@ export class HtmlWriter {
         this.writer.write('</body>');
         this.writer.write('</html>\n');
         this.writer.end();
+        // ˄
+    }
+
+    // Write a link
+    private anchor(url: string, text: string): void {
+        // ˅
+        this.paragraph('<a href="' + url + '">' + text + '</a>');
         // ˄
     }
 

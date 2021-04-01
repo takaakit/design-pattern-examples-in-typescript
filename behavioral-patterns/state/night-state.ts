@@ -42,7 +42,7 @@ export class NightState implements State {
 
     alarm(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Sound a emergency bell at night');
+        context.callSecurityGuardsRoom('Sound an emergency bell at night');
         // ˄
     }
 

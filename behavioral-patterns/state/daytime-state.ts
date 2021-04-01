@@ -42,7 +42,7 @@ export class DaytimeState implements State {
 
     alarm(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Sound a emergency bell in the daytime');
+        context.callSecurityGuardsRoom('Sound an emergency bell in the daytime');
         // ˄
     }
 

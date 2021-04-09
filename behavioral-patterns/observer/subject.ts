@@ -5,6 +5,7 @@ import { Observer } from './observer';
 
 // ˄
 
+// Provides an interface for attaching and detaching Observer objects.
 export class Subject {
     // ˅
     

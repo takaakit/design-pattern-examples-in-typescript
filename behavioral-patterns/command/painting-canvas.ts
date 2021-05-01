@@ -31,10 +31,10 @@ export class PaintingCanvas implements PaintingTarget {
         // ˄
     }
 
-    paint(paintingPosX: number, paintingPosY: number): void {
+    paint(x: number, y: number): void {
         // ˅
         this.context.beginPath();
-        this.context.arc(paintingPosX, paintingPosY, this.POINT_RADIUS, 0, Math.PI*2, false);
+        this.context.arc(x, y, this.POINT_RADIUS, 0, Math.PI*2, false);
         this.context.fillStyle = this.COLOR;
         this.context.fill();
         // ˄

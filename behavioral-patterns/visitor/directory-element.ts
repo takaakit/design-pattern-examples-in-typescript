@@ -49,10 +49,9 @@ export class DirectoryElement extends FileSystemElement {
     }
 
     // Add an element
-    add(element: FileSystemElement): FileSystemElement {
+    add(element: FileSystemElement): void {
         // ˅
         this.elements.push(element);
-        return this;
         // ˄
     }
 

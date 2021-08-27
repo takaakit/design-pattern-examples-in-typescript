@@ -6,10 +6,9 @@ Design Pattern Examples in TypeScript
 Model and code examples of GoF Design Patterns for TypeScript.  
 This project is available for the following objectives:  
 
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand GoF Design Pattern examples in TypeScript.
 * To understand the mapping between UML model and TypeScript code.
-* To understand GoF Design Pattern examples in TypeScript.  
-  etc.
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
 > UML model example:
 

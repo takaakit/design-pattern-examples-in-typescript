@@ -1,4 +1,4 @@
-![](screenshots/DiagramMap.svg "All diagrams")
+[<img src="./screenshots/DiagramMap.svg">](https://raw.githubusercontent.com/takaakit/design-pattern-examples-in-typescript/master/screenshots/DiagramMap.svg)
 
 Design Pattern Examples in TypeScript
 ===

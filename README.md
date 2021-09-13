@@ -14,6 +14,7 @@ This project is available for the following objectives:
 
 ![](screenshots/CompositePattern.svg "Composite Pattern")
 
+<a id="code-example"></a>
 > TypeScript code example:
 
 ```typescript:FileElement class
@@ -72,14 +73,12 @@ export class FileElement extends FileSystemElement {
 
 Installation
 ------------
-**Astah**
-* Download Astah UML or Professional from [Change Vision site](http://astah.net/download), and install.  
+**UML Modeling Tool**
+* Download the modeling tool [Astah](http://astah.net/download) UML or Professional, and install.  
+* Download [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.2.5.0** or higher, and add it to Astah.  
+  [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
-**M PLUS plug-in**
-* Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  Use **ver.2.5.0** or higher.
-
-**Development Environment for TypeScript**
+**TypeScript Development Environment**
 1. Install [Visual Studio Code](https://code.visualstudio.com/download).
 2. Install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions for VS Code.
 3. Install [Chrome](https://www.google.com/intl/en/chrome/) browser.
@@ -90,13 +89,15 @@ Installation
 
 Usage
 -----
-**Code Generation**
-  1. Select model elements on the model browser of Astah.
-  2. Click the **Generate Code** button.  
-  The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation.
-  ![](screenshots/GenerateCode.gif "Generate Code")
+**Code Generation from UML**
+  1. Open the Astah file (model/DesignPatternExamplesInTypescript.asta).
+  2. Select model elements on the model browser of Astah.
+  3. Click the **Generate Code** button.  
+  ![](screenshots/GenerateCode.gif "Generate Code")  
+  The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation. [View code example](#code-example).  
+  For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
 
-**Build and Run**
+**Compile and Run**
   1. Open the workspace file (design-pattern-examples-in-typescript.code-workspace) in VS Code.
   2. Select the **Run** icon in the Activity Bar on the side of VS Code.
   3. Select the configuration named Launch Program using the Configuration drop-down in the Run view.

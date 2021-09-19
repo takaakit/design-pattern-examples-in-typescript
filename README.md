@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > TypeScript code example:
 
-```typescript:FileElement class
+```typescript
 // ˅
 'use strict';
 

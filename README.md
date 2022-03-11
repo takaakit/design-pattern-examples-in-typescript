@@ -79,8 +79,8 @@ Installation
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **TypeScript Development Environment**
-1. Install [Visual Studio Code](https://code.visualstudio.com/download).
-2. Install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions for VS Code.
+1. Install [Visual Studio Code](https://code.visualstudio.com/download) **ver.1.46** or higher.
+2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions for VS Code.
 3. Install [Chrome](https://www.google.com/intl/en/chrome/) browser.
 4. Install [Node.js](https://nodejs.org/en/) **ver.12.3.1** or higher.
 5. Install TypeScript and type definitions with the following commands using npm.  

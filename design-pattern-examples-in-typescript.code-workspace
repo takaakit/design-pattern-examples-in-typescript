@@ -7,6 +7,9 @@
 	"settings": {
 		"liveServer.settings.NoBrowser": true,
 		"liveServer.settings.CustomBrowser": "chrome",
-		"liveServer.settings.port": 5500
+		"liveServer.settings.port": 5500,
+		"code-runner.showRunCommandInEditorContextMenu": false,
+		"code-runner.showRunCommandInExplorerContextMenu": false,
+		"code-runner.showRunIconInEditorTitleMenu": false
 	}
 }

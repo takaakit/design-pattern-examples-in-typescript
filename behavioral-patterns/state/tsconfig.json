@@ -2,6 +2,10 @@
     "compilerOptions": {
         "target": "es5",
         "module": "umd",
+        "outDir": "./out",
         "sourceMap": true
-    }
+    },
+    "include": [
+        "./**/*.ts"
+    ]
 }

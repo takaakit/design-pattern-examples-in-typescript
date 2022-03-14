@@ -38,7 +38,7 @@ import { Context } from './context';
 import * as fs from 'fs';
 import * as readline from 'readline';
 
-const stream = fs.createReadStream(__dirname + '/program.txt', 'utf8');
+const stream = fs.createReadStream(process.cwd() + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });
 reader.on('line', (line: string) => {
 	console.log('Before parsing : ' + line);

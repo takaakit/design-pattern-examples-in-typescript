@@ -29,7 +29,7 @@ export class PageCreator {
 
     createSimpleHomepage(mailAddress: string, htmlFileName: string): void {
         // ˅
-        const addressBook: Map<string, string> = DataLibrary.getInstance().getData(__dirname + '/addressbook.txt');
+        const addressBook: Map<string, string> = DataLibrary.getInstance().getData(process.cwd() + '/addressbook.txt');
         const userName: string = addressBook.get(mailAddress);
         
         const writer: HtmlWriter = new HtmlWriter(fs.createWriteStream(htmlFileName, 'utf8'));

@@ -6,6 +6,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/chain-of-responsibility",
             "program": "${workspaceFolder}/behavioral-patterns/chain-of-responsibility/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/chain-of-responsibility",
             "preLaunchTask": "tsc: build - behavioral-patterns/chain-of-responsibility/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -30,6 +31,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/interpreter",
             "program": "${workspaceFolder}/behavioral-patterns/interpreter/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/interpreter",
             "preLaunchTask": "tsc: build - behavioral-patterns/interpreter/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -42,6 +44,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/iterator",
             "program": "${workspaceFolder}/behavioral-patterns/iterator/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/iterator",
             "preLaunchTask": "tsc: build - behavioral-patterns/iterator/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -66,6 +69,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/memento",
             "program": "${workspaceFolder}/behavioral-patterns/memento/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/memento",
             "preLaunchTask": "tsc: build - behavioral-patterns/memento/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -78,6 +82,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/observer",
             "program": "${workspaceFolder}/behavioral-patterns/observer/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/observer",
             "preLaunchTask": "tsc: build - behavioral-patterns/observer/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -102,6 +107,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/strategy",
             "program": "${workspaceFolder}/behavioral-patterns/strategy/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/strategy",
             "preLaunchTask": "tsc: build - behavioral-patterns/strategy/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -114,6 +120,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/template-method",
             "program": "${workspaceFolder}/behavioral-patterns/template-method/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/template-method",
             "preLaunchTask": "tsc: build - behavioral-patterns/template-method/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -126,6 +133,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/visitor",
             "program": "${workspaceFolder}/behavioral-patterns/visitor/main.ts",
+            "cwd": "${workspaceFolder}/behavioral-patterns/visitor",
             "preLaunchTask": "tsc: build - behavioral-patterns/visitor/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -138,6 +146,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/abstract-factory",
             "program": "${workspaceFolder}/creational-patterns/abstract-factory/main.ts",
+            "cwd": "${workspaceFolder}/creational-patterns/abstract-factory",
             "preLaunchTask": "tsc: build - creational-patterns/abstract-factory/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -150,6 +159,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/builder",
             "program": "${workspaceFolder}/creational-patterns/builder/main.ts",
+            "cwd": "${workspaceFolder}/creational-patterns/builder",
             "preLaunchTask": "tsc: build - creational-patterns/builder/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -162,6 +172,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/factory-method",
             "program": "${workspaceFolder}/creational-patterns/factory-method/main.ts",
+            "cwd": "${workspaceFolder}/creational-patterns/factory-method",
             "preLaunchTask": "tsc: build - creational-patterns/factory-method/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -174,6 +185,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/prototype",
             "program": "${workspaceFolder}/creational-patterns/prototype/main.ts",
+            "cwd": "${workspaceFolder}/creational-patterns/prototype",
             "preLaunchTask": "tsc: build - creational-patterns/prototype/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -186,6 +198,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/singleton",
             "program": "${workspaceFolder}/creational-patterns/singleton/main.ts",
+            "cwd": "${workspaceFolder}/creational-patterns/singleton",
             "preLaunchTask": "tsc: build - creational-patterns/singleton/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -198,6 +211,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/adapter",
             "program": "${workspaceFolder}/structural-patterns/adapter/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/adapter",
             "preLaunchTask": "tsc: build - structural-patterns/adapter/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -210,6 +224,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/bridge",
             "program": "${workspaceFolder}/structural-patterns/bridge/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/bridge",
             "preLaunchTask": "tsc: build - structural-patterns/bridge/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -222,6 +237,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/composite",
             "program": "${workspaceFolder}/structural-patterns/composite/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/composite",
             "preLaunchTask": "tsc: build - structural-patterns/composite/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -234,6 +250,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/decorator",
             "program": "${workspaceFolder}/structural-patterns/decorator/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/decorator",
             "preLaunchTask": "tsc: build - structural-patterns/decorator/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -246,6 +263,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/facade",
             "program": "${workspaceFolder}/structural-patterns/facade/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/facade",
             "preLaunchTask": "tsc: build - structural-patterns/facade/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -258,6 +276,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/flyweight",
             "program": "${workspaceFolder}/structural-patterns/flyweight/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/flyweight",
             "preLaunchTask": "tsc: build - structural-patterns/flyweight/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [
@@ -270,6 +289,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/proxy",
             "program": "${workspaceFolder}/structural-patterns/proxy/main.ts",
+            "cwd": "${workspaceFolder}/structural-patterns/proxy",
             "preLaunchTask": "tsc: build - structural-patterns/proxy/tsconfig.json",
             "console": "integratedTerminal",
             "skipFiles": [

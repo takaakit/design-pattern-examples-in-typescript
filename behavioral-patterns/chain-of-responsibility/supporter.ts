@@ -39,7 +39,7 @@ export abstract class Supporter {
         // ˄
     }
 
-    // Set a next supporter.
+    // Set a next supporter and return it.
     setNext(next: Supporter): Supporter {
         // ˅
         this.next = next;

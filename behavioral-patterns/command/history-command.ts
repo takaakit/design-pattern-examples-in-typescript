@@ -20,6 +20,7 @@ export class HistoryCommand implements Command {
         // ˄
     }
 
+    // Execute all past commands
     execute(): void {
         // ˅
         for (let command of this.pastCommands) {

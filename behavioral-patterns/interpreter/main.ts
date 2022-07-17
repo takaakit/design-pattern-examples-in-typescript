@@ -38,6 +38,7 @@ import { Context } from './context';
 import * as fs from 'fs';
 import * as readline from 'readline';
 
+// Reads commands line by line from the "program.txt" and parses them.
 const stream = fs.createReadStream(process.cwd() + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });
 reader.on('line', (line: string) => {

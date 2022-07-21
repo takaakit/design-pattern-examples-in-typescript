@@ -16,6 +16,8 @@ const player2 = new Player('James', new MirrorStrategy());
 for (let i = 0; i < 100; i++) {
     const handOfPlayer1 = player1.showHandSignal();
     const handOfPlayer2 = player2.showHandSignal();
+
+    // Judge win, loss, or draw
     let resultOfPlayer1: GameResultType;
     let resultOfPlayer2: GameResultType;
     if (handOfPlayer1.isStrongerThan(handOfPlayer2)) {
@@ -33,6 +35,7 @@ for (let i = 0; i < 100; i++) {
         resultOfPlayer1 = GameResultType.Draw;
         resultOfPlayer2 = GameResultType.Draw;
     }
+
     player1.notifyGameResult(resultOfPlayer1, handOfPlayer1, handOfPlayer2);
     player2.notifyGameResult(resultOfPlayer2, handOfPlayer2, handOfPlayer1);
 }

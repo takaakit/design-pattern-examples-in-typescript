@@ -6,6 +6,7 @@ import { MessageDisplay } from './message-display';
 
 // ˄
 
+// Adapt the MessageDisplay interface to the Print interface.
 export class PrintMessageDisplay extends MessageDisplay implements Print {
     // ˅
     

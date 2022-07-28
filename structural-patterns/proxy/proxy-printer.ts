@@ -25,7 +25,12 @@ export class ProxyPrinter implements Printer {
 
     getName(): string {
         // ˅
-        return this.currentName;
+        if (this.real != null) {
+            return this.real.getName();
+        }
+        else {
+            return this.currentName;
+        }
         // ˄
     }
 

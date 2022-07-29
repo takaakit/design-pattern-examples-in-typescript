@@ -85,7 +85,7 @@ Installation
 4. Install [Node.js](https://nodejs.org/en/) **ver.12.3.1** or higher.
 5. Install TypeScript and type definitions with the following commands using npm.  
 `cd <this directory (design-pattern-examples-in-typescript)>`  
-`npm install typescript @types/node`  
+`npm install typescript @types/node --save-dev`  
 
 Usage
 -----

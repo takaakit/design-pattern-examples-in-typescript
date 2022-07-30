@@ -6,6 +6,7 @@ import { RealPrinter } from './real-printer';
 
 // ˄
 
+// ProxyPrinter forwards requests to RealPrinter when appropriate.
 export class ProxyPrinter implements Printer {
     // ˅
     
@@ -39,15 +40,18 @@ export class ProxyPrinter implements Printer {
         if (this.real != null) {
             this.real.changeName(name);
         }
+        
         this.currentName = name;
         // ˄
     }
 
     output(content: string): void {
         // ˅
+        // Check to see if the the RealPrinter had been created, create it if necessary.
         if (this.real == null) {
             this.real = new RealPrinter(this.currentName);
         }
+        
         this.real.output(content);
         // ˄
     }

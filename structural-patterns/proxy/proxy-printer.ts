@@ -47,7 +47,7 @@ export class ProxyPrinter implements Printer {
 
     output(content: string): void {
         // ˅
-        // Check to see if the the RealPrinter had been created, create it if necessary.
+        // Check to see if the RealPrinter had been created, create it if necessary.
         if (this.real == null) {
             this.real = new RealPrinter(this.currentName);
         }

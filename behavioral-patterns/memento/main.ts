@@ -13,7 +13,7 @@ import { Memento } from './memento';
 const gamer: Gamer = new Gamer(100);            // The initial money is 100
 let memento: Memento = gamer.createMemento();   // Save the initial state
 
-(async () => {		// Note: Define an anonymous function with async keyword for using await keyword.
+(async () => {      // Note: Define an anonymous function with async keyword for using await keyword.
     for (let i = 0; i < 10; i++) {
         console.log('==== Turn ' + (i + 1));        // Display count
 

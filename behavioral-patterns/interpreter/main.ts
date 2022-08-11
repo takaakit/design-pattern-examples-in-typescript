@@ -42,8 +42,8 @@ import * as readline from 'readline';
 const stream = fs.createReadStream(process.cwd() + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });
 reader.on('line', (line: string) => {
-	console.log('Before parsing : ' + line);
-	const node: Node = new Program();
-	node.parse(new Context(line));
-	console.log('After parsing  : ' + node);
+    console.log('Before parsing : ' + line);
+    const node: Node = new Program();
+    node.parse(new Context(line));
+    console.log('After parsing  : ' + node);
 });

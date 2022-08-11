@@ -13,7 +13,7 @@ export class Memento {
 
     constructor(money: number) {
         // ˅
-		this._money = money;
+        this._money = money;
         // ˄
     }
 

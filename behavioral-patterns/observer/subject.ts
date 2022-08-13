@@ -27,7 +27,7 @@ export class Subject {
 
     detach(observer: Observer): void {
         // ˅
-        for (let i: number = 0; i < this.observers.length; i++) {
+        for (let i = 0; i < this.observers.length; i++) {
             if(this.observers[i] === observer){
                 this.observers.splice(i, 1);
             }

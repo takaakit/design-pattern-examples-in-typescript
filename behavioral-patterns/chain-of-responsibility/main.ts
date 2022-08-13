@@ -24,6 +24,6 @@ const joseph: Supporter = new LimitedSupporter('Joseph', 5);
 emily.setNext(william).setNext(amelia).setNext(joseph);
 
 // Various troubles occurred.
-for (let i: number = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     emily.support(new Trouble(i));
 }

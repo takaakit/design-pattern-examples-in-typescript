@@ -104,8 +104,11 @@ Usage
   4. Click the **Start Debugging** button.  
      ![](./screenshots/CompileAndRun.gif "Compile and Run")  
 
-     *Note*: Before running patterns **Command**, **Mediator**, and **State**, you need to click to Go Live from the status bar to turn a server on. After running those patterns, click again to turn the server off.  
+     *Note1*: Before running patterns **Command**, **Mediator**, and **State**, you need to click to Go Live from the status bar to turn a server on. After running those patterns, click again to turn the server off.  
      ![](./screenshots/GoLiveButton.png "Go Live button")
+
+     *Note2*: If you encounter these error messages, change the VS Code locale to "en" and restart VS Code.  
+     ![](./screenshots/BuildError.png "Build Error")
 
   For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
 

@@ -39,18 +39,18 @@ export class AppLogin implements Mediator {
         this.buttonCancel.mediator = this;
 
         // Generate a click event of the Guest radio button.
-        (<HTMLButtonElement>document.getElementById('radioGuest')).click();
+        (<HTMLButtonElement>document.getElementById(`radioGuest`)).click();
         // ˄
     }
 
     createColleagues(): void {
         // ˅
-        this.radioGuest = new ColleagueRadioButton(<HTMLInputElement>document.getElementById('radioGuest'));
-        this.radioLogin = new ColleagueRadioButton(<HTMLInputElement>document.getElementById('radioLogin'));
-        this.textUsername = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textUsername'));
-        this.textPassword = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById('textPassword'));
-        this.buttonOk = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonOk'));
-        this.buttonCancel = new ColleagueButton(<HTMLButtonElement>document.getElementById('buttonCancel'));
+        this.radioGuest = new ColleagueRadioButton(<HTMLInputElement>document.getElementById(`radioGuest`));
+        this.radioLogin = new ColleagueRadioButton(<HTMLInputElement>document.getElementById(`radioLogin`));
+        this.textUsername = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById(`textUsername`));
+        this.textPassword = new ColleagueTextField(<HTMLTextAreaElement>document.getElementById(`textPassword`));
+        this.buttonOk = new ColleagueButton(<HTMLButtonElement>document.getElementById(`buttonOk`));
+        this.buttonCancel = new ColleagueButton(<HTMLButtonElement>document.getElementById(`buttonCancel`));
         // ˄
     }
 
@@ -58,7 +58,7 @@ export class AppLogin implements Mediator {
     colleagueChanged(): void {
         // ˅
         if (this.buttonOk.isPressed() || this.buttonCancel.isPressed()) {
-            document.body.innerHTML = '<h1>Dialog terminated.</h1>'     // Display a termination message
+            document.body.innerHTML = `<h1>Dialog terminated.</h1>`     // Display a termination message
         }
         else {
             if (this.radioGuest.isSelected()) {         // Guest mode

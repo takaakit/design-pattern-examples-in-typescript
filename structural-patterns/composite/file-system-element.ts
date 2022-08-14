@@ -17,7 +17,7 @@ export abstract class FileSystemElement {
 
     toString(): string {
         // ˅
-        return this.name + ' (' + this.size + ')'
+        return `${this.name} (${this.size})`;
         // ˄
     }
 

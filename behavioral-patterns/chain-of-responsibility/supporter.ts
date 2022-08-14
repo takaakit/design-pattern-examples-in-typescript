@@ -52,14 +52,14 @@ export abstract class Supporter {
     // Trouble was supported.
     private supported(trouble: Trouble): void {
         // ˅
-        console.log(trouble.toString() + " was handled by " + this.name + ".");
+        console.log(`${trouble.toString()} was handled by ${this.name}.`);
         // ˄
     }
 
     // Trouble was unsupported.
     private unsupported(trouble: Trouble): void {
         // ˅
-        console.log(trouble.toString() + " was not handled.");
+        console.log(`${trouble.toString()} was not handled.`);
         // ˄
     }
 

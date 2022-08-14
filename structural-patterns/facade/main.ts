@@ -6,4 +6,4 @@ the DataLibrary and uses the info to create an HTML file.
 
 import { PageCreator } from './page-creator';
 
-PageCreator.getInstance().createSimpleHomepage('emily@example.com', 'Homepage.html');
+PageCreator.getInstance().createSimpleHomepage(`emily@example.com`, `Homepage.html`);

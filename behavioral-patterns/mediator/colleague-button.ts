@@ -19,8 +19,8 @@ export class ColleagueButton extends Colleague {
         super();
         this.button = button;
         this._isPressed = false;
-        this.button.addEventListener('mousedown', (event) => this.pressedButton(event));
-        this.button.addEventListener('mouseup', (event) => this.releasedButton(event));
+        this.button.addEventListener(`mousedown`, (event) => this.pressedButton(event));
+        this.button.addEventListener(`mouseup`, (event) => this.releasedButton(event));
         // ˄
     }
 

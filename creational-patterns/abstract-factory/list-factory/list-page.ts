@@ -19,16 +19,16 @@ export class ListPage extends Page {
     toHTML(): string {
         // ˅
         const htmlData: Array<string> = new Array<string>();
-        htmlData.push('<html><head><title>' + this.title + '</title></head>');
-        htmlData.push('<body><h1>' + this.title + '</h1>');
-        htmlData.push('<ul>');
+        htmlData.push(`<html><head><title>${this.title}</title></head>`);
+        htmlData.push(`<body><h1>${this.title}</h1>`);
+        htmlData.push(`<ul>`);
         for (let content of this.contents) {
             htmlData.push(content.toHTML());
         }
-        htmlData.push('</ul>');
-        htmlData.push('<hr><address>' + this.author + '</address>');
-        htmlData.push('</body></html>\n');
-        return htmlData.join('');
+        htmlData.push(`</ul>`);
+        htmlData.push(`<hr><address>${this.author}</address>`);
+        htmlData.push(`</body></html>\n`);
+        return htmlData.join(``);
         // ˄
     }
 

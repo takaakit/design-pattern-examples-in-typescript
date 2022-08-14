@@ -31,7 +31,7 @@ export class StringDisplay extends AbstractDisplay {
 
     write(): void {
         // ˅
-        console.log('|' + this.stringValue + '|');  // Display the character with '|'
+        console.log(`|${this.stringValue}|`);  // Display the character with '|'
         // ˄
     }
 
@@ -43,11 +43,9 @@ export class StringDisplay extends AbstractDisplay {
 
     private writeLine(): void {
         // ˅
-        process.stdout.write('+');      // Display an end mark '+'
-        for (let i = 0; i < this.width; i++) {
-            process.stdout.write('-');  // Display a line '-'
-        }
-        console.log('+');               // Display an end mark '+'
+        process.stdout.write(`+`);                      // Display an end mark '+'
+        process.stdout.write(`-`.repeat(this.width));   // Display a line '-'
+        console.log(`+`);                               // Display an end mark '+'
         // ˄
     }
 

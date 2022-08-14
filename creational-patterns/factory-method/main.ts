@@ -11,11 +11,11 @@ import { CreditCardFactory } from './credit-card/credit-card-factory';
 
 const factory: Factory = new CreditCardFactory();
 
-const jacksonCard: Product = factory.create('Jackson');
+const jacksonCard: Product = factory.create(`Jackson`);
 jacksonCard.use();
 
-const sophiaCard: Product = factory.create('Sophia');
+const sophiaCard: Product = factory.create(`Sophia`);
 sophiaCard.use();
 
-const oliviaCard: Product = factory.create('Olivia');
+const oliviaCard: Product = factory.create(`Olivia`);
 oliviaCard.use();

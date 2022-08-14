@@ -16,7 +16,7 @@ export class ColleagueTextField extends Colleague {
         // ˅
         super();
         this.textArea = textArea;
-        this.textArea.addEventListener('input', (event) => this.inputTextArea(event));
+        this.textArea.addEventListener(`input`, (event) => this.inputTextArea(event));
         // ˄
     }
 

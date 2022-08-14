@@ -18,23 +18,23 @@ export class ListVisitor implements Visitor {
 
     constructor() {
         // ˅
-        this.currentDirectory = '';
+        this.currentDirectory = ``;
         // ˄
     }
 
     // Visit a file
     visitFile(file: FileElement): void {
         // ˅
-        console.log(this.currentDirectory + '/' + file.toString());
+        console.log(`${this.currentDirectory}/${file.toString()}`);
         // ˄
     }
 
     // Visit a directory
     visitDirectory(directory: DirectoryElement): void {
         // ˅
-        console.log(this.currentDirectory + '/' + directory.toString());
+        console.log(`${this.currentDirectory}/${directory.toString()}`);
         const visitedDirectory = this.currentDirectory;
-        this.currentDirectory = this.currentDirectory + '/' + directory.name;
+        this.currentDirectory = `${this.currentDirectory}/${directory.name}`;
 
         const iterator = directory.iterator();
         let result = iterator.next();

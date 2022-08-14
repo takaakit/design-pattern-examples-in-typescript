@@ -27,17 +27,17 @@ export class AppMain {
 
     constructor() {
         // ˅
-        this.canvas = <HTMLCanvasElement>document.getElementById('canvas');
-        this.undoButton = <HTMLButtonElement>document.getElementById('undoButton')
-        this.clearButton = <HTMLButtonElement>document.getElementById('clearButton')
+        this.canvas = <HTMLCanvasElement>document.getElementById(`canvas`);
+        this.undoButton = <HTMLButtonElement>document.getElementById(`undoButton`)
+        this.clearButton = <HTMLButtonElement>document.getElementById(`clearButton`)
         this.history = new HistoryCommand();
-        this.paintingCanvas = new PaintingCanvas(this.canvas.getContext('2d'), this.canvas.width, this.canvas.height);
+        this.paintingCanvas = new PaintingCanvas(this.canvas.getContext(`2d`), this.canvas.width, this.canvas.height);
 
-        this.canvas.addEventListener('mousedown', () => this.onMouseDown());
-        this.canvas.addEventListener('mousemove', (event) => this.onMouseMove(event));
-        this.canvas.addEventListener('mouseup', () => this.onMouseUp());
-        this.undoButton.addEventListener('click', () => this.onUndoButtonClick());
-        this.clearButton.addEventListener('click', () => this.onClearButtonClick());
+        this.canvas.addEventListener(`mousedown`, () => this.onMouseDown());
+        this.canvas.addEventListener(`mousemove`, (event) => this.onMouseMove(event));
+        this.canvas.addEventListener(`mouseup`, () => this.onMouseUp());
+        this.undoButton.addEventListener(`click`, () => this.onUndoButtonClick());
+        this.clearButton.addEventListener(`click`, () => this.onClearButtonClick());
 
         this.paintingCanvas.clear();
         // ˄

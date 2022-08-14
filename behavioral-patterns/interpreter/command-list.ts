@@ -24,10 +24,10 @@ export class CommandList implements Node {
         // ˅
         while (true) {
             if (context.getToken() == null) {
-                throw new Error('Missing "end"');
+                throw new Error(`Missing "end"`);
             }
-            else if (context.getToken() === 'end') {
-                context.slideToken('end');
+            else if (context.getToken() === `end`) {
+                context.slideToken(`end`);
                 break;
             }
             else {
@@ -42,7 +42,7 @@ export class CommandList implements Node {
 
     toString(): string {
         // ˅
-        return '[' + this.nodes.join(', ') + ']';
+        return `[${this.nodes.join(`, `)}]`;
         // ˄
     }
 

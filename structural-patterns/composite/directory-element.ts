@@ -41,9 +41,9 @@ export class DirectoryElement extends FileSystemElement {
     // Print this element with the "upperPath".
     print(upperPath: string): void {
         // ˅
-        console.log(upperPath + '/' + this.toString());
+        console.log(`${upperPath}/${this.toString()}`);
         for (let i = 0; i < this.elements.length; i++) {
-            this.elements[i].print(upperPath + '/' + this.name);
+            this.elements[i].print(`${upperPath}/${this.name}`);
         }
         // ˄
     }

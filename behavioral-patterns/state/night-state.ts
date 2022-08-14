@@ -36,25 +36,25 @@ export class NightState implements State {
 
     use(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Emergency: Use a safe at night!');
+        context.callSecurityGuardsRoom(`Emergency: Use a safe at night!`);
         // ˄
     }
 
     alarm(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Sound an emergency bell at night');
+        context.callSecurityGuardsRoom(`Sound an emergency bell at night`);
         // ˄
     }
 
     phone(context: Context): void {
         // ˅
-        context.recordSecurityLog('Record a night call');
+        context.recordSecurityLog(`Record a night call`);
         // ˄
     }
 
     toString(): string {
         // ˅
-        return '[Night]';
+        return `[Night]`;
         // ˄
     }
 

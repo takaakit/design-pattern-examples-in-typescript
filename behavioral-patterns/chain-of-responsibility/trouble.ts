@@ -19,7 +19,7 @@ export class Trouble {
 
     toString(): string {
         // ˅
-        return "[Trouble " + this.id + "]";
+        return `[Trouble ${this.id}]`;
         // ˄
     }
 

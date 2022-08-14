@@ -36,25 +36,25 @@ export class DaytimeState implements State {
 
     use(context: Context): void {
         // ˅
-        context.recordSecurityLog('Use a safe in the daytime');
+        context.recordSecurityLog(`Use a safe in the daytime`);
         // ˄
     }
 
     alarm(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Sound an emergency bell in the daytime');
+        context.callSecurityGuardsRoom(`Sound an emergency bell in the daytime`);
         // ˄
     }
 
     phone(context: Context): void {
         // ˅
-        context.callSecurityGuardsRoom('Make a normal call in the daytime');
+        context.callSecurityGuardsRoom(`Make a normal call in the daytime`);
         // ˄
     }
 
     toString(): string {
         // ˅
-        return '[Daytime]';
+        return `[Daytime]`;
         // ˄
     }
 

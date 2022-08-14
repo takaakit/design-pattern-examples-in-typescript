@@ -16,11 +16,11 @@ export class LargeSizeChar {
     constructor(charName: string) {
         // ˅
         try {
-            const buf = fs.readFileSync(process.cwd() + '/big' + charName + '.txt', 'utf8');
+            const buf = fs.readFileSync(`${process.cwd()}/big${charName}.txt`, `utf8`);
             this.displayData = buf.toString();
         }
         catch {
-            this.displayData = charName + '?';
+            this.displayData = `${charName}?`;
         }
         // ˄
     }

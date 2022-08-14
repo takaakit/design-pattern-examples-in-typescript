@@ -19,7 +19,7 @@ export abstract class FileSystemElement implements Element {
 
     toString(): string {
         // ˅
-        return this.name + ' (' + this.size + ')';
+        return `${this.name} (${this.size})`;
         // ˄
     }
 

@@ -23,7 +23,7 @@ export class PaintingCanvas implements PaintingTarget {
 
     constructor(context: CanvasRenderingContext2D, width: number, height: number) {
         // ˅
-        this.COLOR = 'lightgreen';
+        this.COLOR = `lightgreen`;
         this.POINT_RADIUS = 10;
         this.context = context;
         this.width = width;

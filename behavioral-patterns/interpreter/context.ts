@@ -40,7 +40,7 @@ export class Context {
     slideToken(token: string): void {
         // ˅
         if (token !== this.getToken()) {
-            throw new Error('WARNING: ' + token + ' is expected but ' + this.getToken() + ' was found.');
+            throw new Error(`WARNING: ${token} is expected but ${this.getToken()} was found.`);
         }
         this.nextToken();
         // ˄
@@ -52,7 +52,7 @@ export class Context {
             return parseInt(this.getToken());
         }
         catch {
-            throw new Error('WARNING: ' + this.getToken());
+            throw new Error(`WARNING: ${this.getToken()}`);
         }
         // ˄
     }

@@ -31,7 +31,7 @@ export class TextDisplayImpl implements DisplayImpl {
 
     implWrite(): void {
         // ˅
-        console.log(':' + this.text + ':');     // Enclose a text with ":" and display it.
+        console.log(`:${this.text}:`);     // Enclose a text with ":" and display it.
         // ˄
     }
 
@@ -43,11 +43,9 @@ export class TextDisplayImpl implements DisplayImpl {
 
     private printLine(): void {
         // ˅
-        process.stdout.write('*');              // Display "*" mark at the beginning of a frame.
-        for (let i = 0; i < this.width; i++) {  // Display "." for the number of "width".
-            process.stdout.write('.');
-        }
-        process.stdout.write('*\n');            // Display "*" mark at the end of a frame.
+        process.stdout.write(`*`);                      // Display "*" mark at the beginning of a frame.
+        process.stdout.write(`.`.repeat(this.width));   // Display "." for the number of "width".
+        console.log(`*`);                               // Display "*" mark at the end of a frame.
         // ˄
     }
 

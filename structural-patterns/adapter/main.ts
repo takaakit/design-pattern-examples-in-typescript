@@ -13,6 +13,6 @@ or display it as follows.
 import { Print } from './print';
 import { PrintMessageDisplay } from './print-message-display';
 
-const p: Print = new PrintMessageDisplay('Nice to meet you');
+const p: Print = new PrintMessageDisplay(`Nice to meet you`);
 p.printWeak();
 p.printStrong();

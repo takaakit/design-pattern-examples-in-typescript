@@ -21,7 +21,7 @@ export class CharDisplay extends AbstractDisplay {
 
     open(): void {
         // ˅
-        process.stdout.write('<<');             // Display '<<' in the start characters.
+        process.stdout.write(`<<`);             // Display '<<' in the start characters.
         // ˄
     }
 
@@ -33,7 +33,7 @@ export class CharDisplay extends AbstractDisplay {
 
     close(): void {
         // ˅
-        console.log('>>');                      // Display '>>' in the end characters.
+        console.log(`>>`);                      // Display '>>' in the end characters.
         // ˄
     }
 

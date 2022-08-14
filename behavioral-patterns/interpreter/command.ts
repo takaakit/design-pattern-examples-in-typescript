@@ -24,7 +24,7 @@ export class Command implements Node {
     parse(context: Context): void {
         // ˅
         let aNode: Node;
-        if (context.getToken() === 'repeat') {
+        if (context.getToken() === `repeat`) {
             aNode = new Repeat();
             aNode.parse(context);
         }

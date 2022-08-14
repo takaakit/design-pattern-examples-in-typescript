@@ -15,7 +15,7 @@ export class RealPrinter implements Printer {
     constructor(name: string) {
         // ˅
         this.name = name;
-        this.heavyTask('Creating an instance (' + this.name + ') of the Printer');
+        this.heavyTask(`Creating an instance (${this.name}) of the Printer`);
         // ˄
     }
 
@@ -34,10 +34,10 @@ export class RealPrinter implements Printer {
     // Display a content with the name
     output(content: string): void {
         // ˅
-        console.log('==========');
+        console.log(`==========`);
         console.log(content);
-        console.log('Printed by ' + this.name);
-        console.log('==========');
+        console.log(`Printed by ${this.name}`);
+        console.log(`==========`);
         // ˄
     }
 
@@ -46,9 +46,9 @@ export class RealPrinter implements Printer {
         // ˅
         process.stdout.write(message);
         for (let i = 0; i < 50; i++) {
-            process.stdout.write('.');
+            process.stdout.write(`.`);
         }
-        console.log('Done.');
+        console.log(`Done.`);
         // ˄
     }
 

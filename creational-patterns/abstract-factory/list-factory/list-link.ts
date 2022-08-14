@@ -18,7 +18,7 @@ export class ListLink extends Link {
 
     toHTML(): string {
         // ˅
-        return '  <li><a href="' + this.url + '">' + this.name + '</a></li>\n';
+        return `  <li><a href="${this.url}">${this.name}</a></li>\n`;
         // ˄
     }
 

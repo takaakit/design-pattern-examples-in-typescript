@@ -19,7 +19,7 @@ export class HTMLBuilder implements Builder {
 
     constructor() {
         // ˅
-        this.fileName = '';
+        this.fileName = ``;
         this.writer = null;
         // ˄
     }
@@ -27,34 +27,34 @@ export class HTMLBuilder implements Builder {
     // Make a title of HTML file
     createTitle(title: string): void {
         // ˅
-        this.fileName = title + '.html';      // Set a title as a file name
-        this.writer = fs.createWriteStream(this.fileName, 'utf8');
-        this.writer.write('<html><head><title>' + title + '</title></head><body>\n');  // Write a title
-        this.writer.write('<h1>' + title + '</h1>\n');
+        this.fileName = `${title}.html`;      // Set a title as a file name
+        this.writer = fs.createWriteStream(this.fileName, `utf8`);
+        this.writer.write(`<html><head><title>${title}</title></head><body>\n`);  // Write a title
+        this.writer.write(`<h1>${title}</h1>\n`);
         // ˄
     }
 
     // Make a section of HTML file
     createSection(section: string): void {
         // ˅
-        this.writer.write('<p>' + section + '</p>\n');    // Write a section
+        this.writer.write(`<p>${section}</p>\n`);    // Write a section
         // ˄
     }
 
     // Make items of HTML file
     createItems(items: Array<string>): void {
         // ˅
-        this.writer.write('<ul>\n');    // Write items
+        this.writer.write(`<ul>\n`);    // Write items
         for (let item of items) {
-            this.writer.write('<li>' + item + '</li>\n');
+            this.writer.write(`<li>${item}</li>\n`);
         }
-        this.writer.write('</ul>\n');
+        this.writer.write(`</ul>\n`);
         // ˄
     }
 
     close(): void {
         // ˅
-        this.writer.write('</body></html>\n');
+        this.writer.write(`</body></html>\n`);
         this.writer.end();                  // Close file
         // ˄
     }

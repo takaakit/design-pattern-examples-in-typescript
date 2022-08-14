@@ -22,11 +22,11 @@ export class Director {
     // Construct a document
     build(): void {
         // ˅
-        this.builder.createTitle('Greeting');                                   // Title
-        this.builder.createSection('Morning and Afternoon');                    // Section
-        this.builder.createItems(['Good morning.', 'Hello.']);                  // Items
-        this.builder.createSection('Evening');                                  // Other section
-        this.builder.createItems(['Good evening.', 'Good night.', 'Goodbye.']); // Other items
+        this.builder.createTitle(`Greeting`);                                   // Title
+        this.builder.createSection(`Morning and Afternoon`);                    // Section
+        this.builder.createItems([`Good morning.`, `Hello.`]);                  // Items
+        this.builder.createSection(`Evening`);                                  // Other section
+        this.builder.createItems([`Good evening.`, `Good night.`, `Goodbye.`]); // Other items
         this.builder.close();
         // ˄
     }

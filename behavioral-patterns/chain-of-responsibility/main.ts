@@ -15,10 +15,10 @@ import { SpecialSupporter } from './special-supporter';
 import { LimitedSupporter } from './limited-supporter';
 import { Trouble } from './trouble';
 
-const emily: Supporter = new LazySupporter('Emily');
-const william: Supporter = new MoodySupporter('William');
-const amelia: Supporter = new SpecialSupporter('Amelia', 6);
-const joseph: Supporter = new LimitedSupporter('Joseph', 5);
+const emily: Supporter = new LazySupporter(`Emily`);
+const william: Supporter = new MoodySupporter(`William`);
+const amelia: Supporter = new SpecialSupporter(`Amelia`, 6);
+const joseph: Supporter = new LimitedSupporter(`Joseph`, 5);
 
 // Make a chain.
 emily.setNext(william).setNext(amelia).setNext(joseph);

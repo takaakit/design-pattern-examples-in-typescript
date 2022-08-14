@@ -26,7 +26,7 @@ export class Repeat implements Node {
 
     parse(context: Context): void {
         // ˅
-        context.slideToken('repeat');
+        context.slideToken(`repeat`);
         
         this.number = context.getNumber();
         context.slideToken(String(this.number));
@@ -40,7 +40,7 @@ export class Repeat implements Node {
 
     toString(): string {
         // ˅
-        return 'repeat ' + this.number + ' ' + this.commandList;
+        return `repeat ${this.number} ${this.commandList}`;
         // ˄
     }
 

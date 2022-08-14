@@ -16,7 +16,7 @@ export class ColleagueRadioButton extends Colleague {
         // ˅
         super();
         this.radioButton = radioButton;
-        this.radioButton.addEventListener('click', (event) => this.clickRadioButton(event));
+        this.radioButton.addEventListener(`click`, (event) => this.clickRadioButton(event));
         // ˄
     }
 

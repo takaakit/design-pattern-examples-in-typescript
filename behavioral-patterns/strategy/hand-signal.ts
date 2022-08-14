@@ -21,7 +21,7 @@ export class HandSignal {
     private static readonly handSignals: Array<HandSignal> = [new HandSignal(HandSignal.ROCK), new HandSignal(HandSignal.SCISSORS), new HandSignal(HandSignal.PAPER)];
 
     // Characters of the hands
-    private static readonly handName: Array<string> = ['Rock', 'Scissors', 'Paper'];
+    private static readonly handName: Array<string> = [`Rock`, `Scissors`, `Paper`];
 
     // Values of rock, scissors and paper.
     private readonly value: number;

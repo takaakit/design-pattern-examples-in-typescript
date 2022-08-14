@@ -23,7 +23,7 @@ export class Program implements Node {
 
     parse(context: Context): void {
         // ˅
-        context.slideToken('program');
+        context.slideToken(`program`);
 
         const aCommandList: CommandList = new CommandList();
         aCommandList.parse(context);
@@ -34,7 +34,7 @@ export class Program implements Node {
 
     toString(): string {
         // ˅
-        return ('[program ' + this.commandList + ']');
+        return (`[program ${this.commandList}]`);
         // ˄
     }
 

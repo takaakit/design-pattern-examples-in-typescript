@@ -7,7 +7,7 @@ import { DirectoryElement } from './directory-element';
 import { FileElement } from './file-element';
 import { ListVisitor } from './list-visitor';
 
-console.log(`Create a file system`);
+console.log(`Create a file system...`);
 const binDir: DirectoryElement = new DirectoryElement(`bin`);
 const lsFile: FileElement = new FileElement(`ls`, 20);
 binDir.add(lsFile);

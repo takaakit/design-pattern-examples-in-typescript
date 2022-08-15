@@ -23,7 +23,7 @@ export class CommandList implements Node {
     parse(context: Context): void {
         // ˅
         while (true) {
-            if (context.getToken() == null) {
+            if (context.getToken() === null) {
                 throw new Error(`Missing "end"`);
             }
             else if (context.getToken() === `end`) {

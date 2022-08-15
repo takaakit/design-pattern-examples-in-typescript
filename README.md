@@ -57,7 +57,7 @@ export class FileElement extends FileSystemElement {
     // Print this element with the "upperPath".
     print(upperPath: string): void {
         // ˅
-        console.log(upperPath + '/' + this.toString());
+        console.log(`${upperPath}/${this.toString()}`);
         // ˄
     }
 

@@ -18,10 +18,10 @@ const readline = rl.createInterface({
 });
 
 readline.question(``, (data: any) => {
-    let input: string = data;
+    const input: string = data;
     readline.close();
 
-    if (input == `plain`) {
+    if (input === `plain`) {
         const plainTextBuilder: PlainTextBuilder = new PlainTextBuilder();
         const directory: Director = new Director(plainTextBuilder);
         directory.build();
@@ -29,7 +29,7 @@ readline.question(``, (data: any) => {
         const content: string = plainTextBuilder.getContent();
         console.log(content);
     }
-    else if (input == `html`) {
+    else if (input === `html`) {
         const htmlBuilder: HTMLBuilder = new HTMLBuilder();
         const directory: Director = new Director(htmlBuilder);
         directory.build();

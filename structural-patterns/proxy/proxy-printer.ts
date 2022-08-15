@@ -26,7 +26,7 @@ export class ProxyPrinter implements Printer {
 
     getName(): string {
         // ˅
-        if (this.real != null) {
+        if (this.real !== null) {
             return this.real.getName();
         }
         else {
@@ -37,7 +37,7 @@ export class ProxyPrinter implements Printer {
 
     changeName(name: string): void {
         // ˅
-        if (this.real != null) {
+        if (this.real !== null) {
             this.real.changeName(name);
         }
         
@@ -48,7 +48,7 @@ export class ProxyPrinter implements Printer {
     output(content: string): void {
         // ˅
         // Check to see if the RealPrinter had been created, create it if necessary.
-        if (this.real == null) {
+        if (this.real === null) {
             this.real = new RealPrinter(this.currentName);
         }
         

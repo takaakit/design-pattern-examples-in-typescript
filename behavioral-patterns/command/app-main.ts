@@ -1,6 +1,7 @@
 // ˅
 'use strict';
 
+import { Command } from './command';
 import { PaintingCommand } from './painting-command';
 import { HistoryCommand } from './history-command';
 import { PaintingCanvas } from './painting-canvas';
@@ -27,6 +28,7 @@ export class AppMain {
 
     constructor() {
         // ˅
+        this.isDragging = false;
         this.canvas = <HTMLCanvasElement>document.getElementById(`canvas`);
         this.undoButton = <HTMLButtonElement>document.getElementById(`undoButton`)
         this.clearButton = <HTMLButtonElement>document.getElementById(`clearButton`)
@@ -54,9 +56,9 @@ export class AppMain {
         if(this.isDragging){
             const paintingPosX = event.clientX - this.canvas.getBoundingClientRect().left;
             const paintingPosY = event.clientY - this.canvas.getBoundingClientRect().top ;
-            const paintingCommand: PaintingCommand = new PaintingCommand(this.paintingCanvas, paintingPosX, paintingPosY);
-            this.history.add(paintingCommand);
-            paintingCommand.execute();
+            const command: Command = new PaintingCommand(this.paintingCanvas, paintingPosX, paintingPosY);
+            this.history.add(command);
+            command.execute();
         }
         // ˄
     }

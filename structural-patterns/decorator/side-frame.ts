@@ -18,7 +18,7 @@ export class SideFrame extends Frame {
         // ˅
         super(display);
 
-        if (frameChar.length != 1) {
+        if (frameChar.length !== 1) {
             console.log(`Only one character is allowed in a side frame.`);
             process.exit(1);
         }

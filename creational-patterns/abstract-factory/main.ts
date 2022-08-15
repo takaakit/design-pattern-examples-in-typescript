@@ -21,7 +21,7 @@ const readline = rl.createInterface({
 });
 
 readline.question(``, (data: any) => {
-    let input: number = Number(data);
+    const input: number = Number(data);
     readline.close();
     if (isNaN(input)) {
         console.log(`Unexpected value.`);
@@ -29,15 +29,16 @@ readline.question(``, (data: any) => {
     }
 
     let factory: Factory;
-    if (input == 1) {
-        factory = new ListFactory();
-    }
-    else if (input == 2) {
-        factory = new TableFactory();
-    }
-    else {
-        console.log(`The value is not 1 or 2.`);
-        process.exit(1);
+    switch (input) {
+        case 1:
+            factory = new ListFactory();
+            break;
+        case 2:
+            factory = new TableFactory();
+            break;
+        default:
+            console.log(`The value is not 1 or 2.`);
+            process.exit(1);
     }
 
     const washingtonPost: Link = factory.createLink(`The Washington Post`, `https://www.washingtonpost.com/`);

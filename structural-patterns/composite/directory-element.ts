@@ -31,8 +31,8 @@ export class DirectoryElement extends FileSystemElement {
     get size(): number {
         // ˅
         let size: number = 0;
-        for (let i = 0; i < this.elements.length; i++) {
-            size += this.elements[i].size;
+        for (let element of this.elements) {
+            size += element.size;
         }
         return size;
         // ˄
@@ -42,8 +42,8 @@ export class DirectoryElement extends FileSystemElement {
     print(upperPath: string): void {
         // ˅
         console.log(`${upperPath}/${this.toString()}`);
-        for (let i = 0; i < this.elements.length; i++) {
-            this.elements[i].print(`${upperPath}/${this.name}`);
+        for (let element of this.elements) {
+            element.print(`${upperPath}/${this.name}`);
         }
         // ˄
     }

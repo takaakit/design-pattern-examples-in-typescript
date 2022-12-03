@@ -55,7 +55,7 @@ export class Gamer {
                 break;
             default:
                 // Other...Exit
-                console.log(`Unexpected value.`);
+                console.error(`Unexpected value.`);
                 process.exit(1);
         }
         // ˄

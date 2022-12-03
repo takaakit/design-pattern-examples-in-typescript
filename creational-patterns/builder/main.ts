@@ -39,7 +39,7 @@ readline.question(``, (data: any) => {
         console.log(`Output File: ${path.join(process.cwd(), fileName)}`);
     }
     else {
-        console.log(`The value is not "plain" or "html".`);
+        console.error(`The value is not "plain" or "html".`);
         process.exit(1);
     }
 });
